@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CEDA268120AC03F200FCF2DC /* ChainList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA267F20AC03F200FCF2DC /* ChainList.cpp */; };
 		CEDA268520B53BD200FCF2DC /* StaticLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA268320B53BD200FCF2DC /* StaticLinkList.cpp */; };
+		CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA268B20BB964900FCF2DC /* SqStack.cpp */; };
 		CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3B7E020AAD67C007E8FA9 /* main.cpp */; };
 		CEF3B7FE20AAD96C007E8FA9 /* ArrayList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3B7FC20AAD96C007E8FA9 /* ArrayList.cpp */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,8 @@
 		CEDA268020AC03F200FCF2DC /* ChainList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChainList.hpp; sourceTree = "<group>"; };
 		CEDA268320B53BD200FCF2DC /* StaticLinkList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticLinkList.cpp; sourceTree = "<group>"; };
 		CEDA268420B53BD200FCF2DC /* StaticLinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StaticLinkList.hpp; sourceTree = "<group>"; };
+		CEDA268B20BB964900FCF2DC /* SqStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SqStack.cpp; sourceTree = "<group>"; };
+		CEDA268C20BB964900FCF2DC /* SqStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SqStack.hpp; sourceTree = "<group>"; };
 		CEF3B7DD20AAD67C007E8FA9 /* data_structure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = data_structure; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3B7E020AAD67C007E8FA9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CEF3B7FC20AAD96C007E8FA9 /* ArrayList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayList.cpp; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 		CEDA268720B7A92000FCF2DC /* Stack */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA268B20BB964900FCF2DC /* SqStack.cpp */,
+				CEDA268C20BB964900FCF2DC /* SqStack.hpp */,
 			);
 			name = Stack;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */,
 				CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */,
 				CEDA268520B53BD200FCF2DC /* StaticLinkList.cpp in Sources */,
 				CEF3B7FE20AAD96C007E8FA9 /* ArrayList.cpp in Sources */,
