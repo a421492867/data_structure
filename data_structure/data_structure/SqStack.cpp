@@ -33,13 +33,15 @@ int SqStack::GetTop(){
 }
 
 void SqStack::Push(int data){
-    this -> top ++;
-    this -> data[this -> top] = data;
+//    this -> top ++;
+//    this -> data[this -> top] = data;
+    this -> data[++this -> top] = data;
 }
 
 void SqStack::Pop(){
-    this -> data[this -> top] = NULL;
-    this -> top --;
+//    this -> data[this -> top] = NULL;
+//    this -> top --;
+    this -> data[this -> top --] = NULL;
 }
 
 int SqStack::StackLength(){
