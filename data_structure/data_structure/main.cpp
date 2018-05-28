@@ -11,17 +11,20 @@
 #include "ChainList.hpp"
 #include "StaticLinkList.hpp"
 #include "SqStack.hpp"
+#include "LinkedStack.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
 void testStaticList();
 void testSqStack();
+void testLinkedStack();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
 //    testChainList();
     //testStaticList();
-    testSqStack();
+    //testSqStack();
+    testLinkedStack();
     
 }
 
@@ -105,6 +108,21 @@ void testStaticList(){
 
 void testSqStack(){
     SqStack stack;
+    int arr[] = {2,3,4,5,6};
+    int length = end(arr) - begin(arr);
+    stack.CreateStack(arr, length);
+    stack.ShowStack();
+    int top = stack.GetTop();
+    cout << "top is " << top << endl;
+    stack.Push(10);
+    int newTop = stack.GetTop();
+    cout << "new top is " << newTop << endl;
+    stack.ShowStack();
+    stack.Pop();
+    stack.ShowStack();
+}
+void testLinkedStack(){
+    LinkedStack stack;
     int arr[] = {2,3,4,5,6};
     int length = end(arr) - begin(arr);
     stack.CreateStack(arr, length);
