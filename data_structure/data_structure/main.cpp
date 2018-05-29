@@ -14,6 +14,7 @@
 #include "LinkedStack.hpp"
 #include "SqQueue.hpp"
 #include "LinkedQueue.hpp"
+#include "StackApplication.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -22,6 +23,7 @@ void testSqStack();
 void testLinkedStack();
 void testSqQueue();
 void testLinkedQueue();
+void testStackApp();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -30,7 +32,8 @@ int main(int argc, const char * argv[]) {
     //testSqStack();
     //testLinkedStack();
 //    testSqQueue();
-    testLinkedQueue();
+//    testLinkedQueue();
+    testStackApp();
     
 }
 
@@ -170,3 +173,15 @@ void testLinkedQueue(){
     lq.ShowQueue();
     cout << "length : " << lq.QueueLength() << endl;
 }
+
+void testStackApp(){
+    string str = "9+(3-1)*3+10/2";
+    string str2 = "95+(28.5-15)*20+34/25";
+    StackApplication sApp;
+    string suffix = sApp.getSuffixExpression(str2);
+    cout << suffix << endl;
+    float result = sApp.calculate(suffix);
+    cout << result << endl;
+}
+
+

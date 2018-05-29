@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6846B920BD318D004E0007 /* StackApplication.cpp */; };
 		CEDA268120AC03F200FCF2DC /* ChainList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA267F20AC03F200FCF2DC /* ChainList.cpp */; };
 		CEDA268520B53BD200FCF2DC /* StaticLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA268320B53BD200FCF2DC /* StaticLinkList.cpp */; };
 		CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA268B20BB964900FCF2DC /* SqStack.cpp */; };
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE6846B920BD318D004E0007 /* StackApplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StackApplication.cpp; sourceTree = "<group>"; };
+		CE6846BA20BD318D004E0007 /* StackApplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StackApplication.hpp; sourceTree = "<group>"; };
 		CEDA267F20AC03F200FCF2DC /* ChainList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChainList.cpp; sourceTree = "<group>"; };
 		CEDA268020AC03F200FCF2DC /* ChainList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChainList.hpp; sourceTree = "<group>"; };
 		CEDA268320B53BD200FCF2DC /* StaticLinkList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticLinkList.cpp; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				CEDA268C20BB964900FCF2DC /* SqStack.hpp */,
 				CEDA268E20BBA6FD00FCF2DC /* LinkedStack.cpp */,
 				CEDA268F20BBA6FD00FCF2DC /* LinkedStack.hpp */,
+				CE6846B920BD318D004E0007 /* StackApplication.cpp */,
+				CE6846BA20BD318D004E0007 /* StackApplication.hpp */,
 			);
 			name = Stack;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */,
 				CEDA269020BBA6FD00FCF2DC /* LinkedStack.cpp in Sources */,
 				CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */,
+				CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */,
 				CEDA268520B53BD200FCF2DC /* StaticLinkList.cpp in Sources */,
 				CEDA269720BCF09F00FCF2DC /* LinkedQueue.cpp in Sources */,
 				CEDA269420BBE73500FCF2DC /* SqQueue.cpp in Sources */,
