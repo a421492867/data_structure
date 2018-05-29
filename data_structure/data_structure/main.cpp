@@ -12,19 +12,25 @@
 #include "StaticLinkList.hpp"
 #include "SqStack.hpp"
 #include "LinkedStack.hpp"
+#include "SqQueue.hpp"
+#include "LinkedQueue.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
 void testStaticList();
 void testSqStack();
 void testLinkedStack();
+void testSqQueue();
+void testLinkedQueue();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
 //    testChainList();
     //testStaticList();
     //testSqStack();
-    testLinkedStack();
+    //testLinkedStack();
+//    testSqQueue();
+    testLinkedQueue();
     
 }
 
@@ -135,4 +141,32 @@ void testLinkedStack(){
     stack.ShowStack();
     stack.Pop();
     stack.ShowStack();
+}
+
+void testSqQueue(){
+    SqQueue sq;
+    int arr[] = {2,4,5};
+    int length = end(arr) - begin(arr);
+    sq.CreateQueue(arr, length);
+    sq.ShowQueue();
+    cout << sq.GetHead() << endl;
+    sq.EnQueue(10);
+    sq.ShowQueue();
+    sq.DeQueue();
+    sq.ShowQueue();
+    cout << sq.QueueLength() << endl;
+}
+
+void testLinkedQueue(){
+    LinkedQueue lq;
+    lq.DeQueue();
+    int arr[] = {2,4,5};
+    int length = end(arr) - begin(arr);
+    lq.CreateQueue(arr, length);
+    lq.ShowQueue();
+    lq.EnQueue(90);
+    lq.ShowQueue();
+    lq.DeQueue();
+    lq.ShowQueue();
+    cout << "length : " << lq.QueueLength() << endl;
 }
