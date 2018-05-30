@@ -15,6 +15,7 @@
 #include "SqQueue.hpp"
 #include "LinkedQueue.hpp"
 #include "StackApplication.hpp"
+#include "HStringIndex.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -24,6 +25,7 @@ void testLinkedStack();
 void testSqQueue();
 void testLinkedQueue();
 void testStackApp();
+void testHStringIndex();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -33,7 +35,8 @@ int main(int argc, const char * argv[]) {
     //testLinkedStack();
 //    testSqQueue();
 //    testLinkedQueue();
-    testStackApp();
+    //testStackApp();
+    testHStringIndex();
     
 }
 
@@ -182,6 +185,13 @@ void testStackApp(){
     cout << suffix << endl;
     float result = sApp.calculate(suffix);
     cout << result << endl;
+}
+
+void testHStringIndex(){
+    string s = "abcdrfghi";
+    string t = "ghi";
+    HStringIndex hsi;
+    hsi.GetIndex(s, t);
 }
 
 
