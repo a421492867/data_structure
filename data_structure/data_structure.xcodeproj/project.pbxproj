@@ -17,6 +17,7 @@
 		CEDA269720BCF09F00FCF2DC /* LinkedQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA269520BCF09F00FCF2DC /* LinkedQueue.cpp */; };
 		CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3B7E020AAD67C007E8FA9 /* main.cpp */; };
 		CEF3B7FE20AAD96C007E8FA9 /* ArrayList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3B7FC20AAD96C007E8FA9 /* ArrayList.cpp */; };
+		CEFEF81E20BF8A0400CB6F1A /* KMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF81C20BF8A0400CB6F1A /* KMP.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		CEF3B7E020AAD67C007E8FA9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CEF3B7FC20AAD96C007E8FA9 /* ArrayList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayList.cpp; sourceTree = "<group>"; };
 		CEF3B7FD20AAD96C007E8FA9 /* ArrayList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = "<group>"; };
+		CEFEF81C20BF8A0400CB6F1A /* KMP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KMP.cpp; sourceTree = "<group>"; };
+		CEFEF81D20BF8A0400CB6F1A /* KMP.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KMP.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 			children = (
 				CE6846BD20BE6BE3004E0007 /* HStringIndex.cpp */,
 				CE6846BE20BE6BE3004E0007 /* HStringIndex.hpp */,
+				CEFEF81C20BF8A0400CB6F1A /* KMP.cpp */,
+				CEFEF81D20BF8A0400CB6F1A /* KMP.hpp */,
 			);
 			name = chapter5;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */,
 				CEDA269020BBA6FD00FCF2DC /* LinkedStack.cpp in Sources */,
 				CE6846BF20BE6BE3004E0007 /* HStringIndex.cpp in Sources */,
+				CEFEF81E20BF8A0400CB6F1A /* KMP.cpp in Sources */,
 				CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */,
 				CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */,
 				CEDA268520B53BD200FCF2DC /* StaticLinkList.cpp in Sources */,

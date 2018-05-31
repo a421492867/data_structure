@@ -16,6 +16,7 @@
 #include "LinkedQueue.hpp"
 #include "StackApplication.hpp"
 #include "HStringIndex.hpp"
+#include "KMP.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -26,6 +27,7 @@ void testSqQueue();
 void testLinkedQueue();
 void testStackApp();
 void testHStringIndex();
+void testKMP();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -192,6 +194,14 @@ void testHStringIndex(){
     string t = "ghi";
     HStringIndex hsi;
     hsi.GetIndex(s, t);
+}
+
+void testKMP(){
+    KMP kmp;
+    string s = "abcdrfghi";
+    string t = "ghi";
+    kmp.KMPMatcher(s, t);
+    
 }
 
 
