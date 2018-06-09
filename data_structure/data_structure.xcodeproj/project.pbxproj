@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE24FF9320C908BC00F9B84A /* BTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE24FF9120C908BC00F9B84A /* BTree.cpp */; };
 		CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6846B920BD318D004E0007 /* StackApplication.cpp */; };
 		CE6846BF20BE6BE3004E0007 /* HStringIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6846BD20BE6BE3004E0007 /* HStringIndex.cpp */; };
 		CEDA268120AC03F200FCF2DC /* ChainList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA267F20AC03F200FCF2DC /* ChainList.cpp */; };
@@ -33,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE24FF9120C908BC00F9B84A /* BTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BTree.cpp; sourceTree = "<group>"; };
+		CE24FF9220C908BC00F9B84A /* BTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BTree.hpp; sourceTree = "<group>"; };
 		CE6846B920BD318D004E0007 /* StackApplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StackApplication.cpp; sourceTree = "<group>"; };
 		CE6846BA20BD318D004E0007 /* StackApplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StackApplication.hpp; sourceTree = "<group>"; };
 		CE6846BD20BE6BE3004E0007 /* HStringIndex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HStringIndex.cpp; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 		CEF3B7DF20AAD67C007E8FA9 /* data_structure */ = {
 			isa = PBXGroup;
 			children = (
+				CEFEF81F20BFD27B00CB6F1A /* chapter6 */,
 				CE6846BC20BE4E38004E0007 /* chapter5 */,
 				CEDA268620B7A8C000FCF2DC /* chapter4 */,
 				CEF3B7FA20AAD951007E8FA9 /* chapter3 */,
@@ -174,6 +178,15 @@
 				CEF3B7FD20AAD96C007E8FA9 /* ArrayList.hpp */,
 			);
 			name = ArrayList;
+			sourceTree = "<group>";
+		};
+		CEFEF81F20BFD27B00CB6F1A /* chapter6 */ = {
+			isa = PBXGroup;
+			children = (
+				CE24FF9120C908BC00F9B84A /* BTree.cpp */,
+				CE24FF9220C908BC00F9B84A /* BTree.hpp */,
+			);
+			name = chapter6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +249,7 @@
 				CEDA269020BBA6FD00FCF2DC /* LinkedStack.cpp in Sources */,
 				CE6846BF20BE6BE3004E0007 /* HStringIndex.cpp in Sources */,
 				CEFEF81E20BF8A0400CB6F1A /* KMP.cpp in Sources */,
+				CE24FF9320C908BC00F9B84A /* BTree.cpp in Sources */,
 				CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */,
 				CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */,
 				CEDA268520B53BD200FCF2DC /* StaticLinkList.cpp in Sources */,

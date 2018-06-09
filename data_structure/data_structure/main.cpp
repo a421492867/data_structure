@@ -17,6 +17,7 @@
 #include "StackApplication.hpp"
 #include "HStringIndex.hpp"
 #include "KMP.hpp"
+#include "BTree.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -28,6 +29,7 @@ void testLinkedQueue();
 void testStackApp();
 void testHStringIndex();
 void testKMP();
+void testBTree();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -38,7 +40,9 @@ int main(int argc, const char * argv[]) {
 //    testSqQueue();
 //    testLinkedQueue();
     //testStackApp();
-    testHStringIndex();
+    //testHStringIndex();
+    testBTree();
+    
     
 }
 
@@ -202,6 +206,12 @@ void testKMP(){
     string t = "ghi";
     kmp.KMPMatcher(s, t);
     
+}
+
+void testBTree(){
+    BTree b;
+    b.input();
+    b.output();
 }
 
 
