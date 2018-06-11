@@ -212,6 +212,12 @@ void testBTree(){
     BTree b;
     b.input();
     b.output();
+    cout << "前序遍历: "  << endl;
+    b.PreOderTraverse(b.getRoot());
+    cout << "中序遍历: "  << endl;
+    b.InOderTraverse(b.getRoot());
+    cout << "后序遍历: "  << endl;
+    b.PostOrderTraverse(b.getRoot());
 }
 
 

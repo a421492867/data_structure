@@ -105,5 +105,37 @@ void BTree::output()//输出二叉树的各种信息
     
 }
 
+TreeNode* BTree::getRoot(){
+    return this -> root;
+}
+
+void BTree::PreOderTraverse(TreeNode *root){
+    if(root == NULL){
+        return;
+    }
+    cout << root -> ch << endl;
+    PreOderTraverse(root -> leftChild);
+    PreOderTraverse(root -> rightChild);
+
+}
+
+void BTree::InOderTraverse(TreeNode *root){
+    if(root == NULL){
+        return;
+    }
+    InOderTraverse(root -> leftChild);
+    cout << root -> ch << endl;
+    InOderTraverse(root -> rightChild);
+}
+
+void BTree::PostOrderTraverse(TreeNode *root){
+    if(root == NULL){
+        return;
+    }
+    PostOrderTraverse(root -> leftChild);
+    PostOrderTraverse(root -> rightChild);
+    cout << root -> ch << endl;
+}
+
 
 

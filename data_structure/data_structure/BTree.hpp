@@ -31,12 +31,17 @@ public:
     BTree(){
         root = new TreeNode();
     }
+    TreeNode* getRoot();
     void createTree(TreeNode *&root);
     void input();
     void printTree(TreeNode *root);
     void output();
     int solveHeight(TreeNode *root);
-    void parent(TreeNode*root,char c);
+    void parent(TreeNode *root,char c);
     int computerLeaf(TreeNode *root);
+    void PreOderTraberse();
+    void PreOderTraverse(TreeNode *root);
+    void InOderTraverse(TreeNode *root);
+    void PostOrderTraverse(TreeNode *root);
 };
 
