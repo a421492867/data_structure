@@ -18,6 +18,7 @@
 #include "HStringIndex.hpp"
 #include "KMP.hpp"
 #include "BTree.hpp"
+#include "BiThrTree.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -30,6 +31,7 @@ void testStackApp();
 void testHStringIndex();
 void testKMP();
 void testBTree();
+void testBiThrTree();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -41,7 +43,8 @@ int main(int argc, const char * argv[]) {
 //    testLinkedQueue();
     //testStackApp();
     //testHStringIndex();
-    testBTree();
+    //testBTree();
+    testBiThrTree();
     
     
 }
@@ -218,6 +221,13 @@ void testBTree(){
     b.InOderTraverse(b.getRoot());
     cout << "后序遍历: "  << endl;
     b.PostOrderTraverse(b.getRoot());
+}
+
+void testBiThrTree(){
+    BiThrTree b;
+    b.input();
+    b.InThreading(b.getRoot());
+    b.InOrderTraverse_Thr(b.getRoot());
 }
 
 
