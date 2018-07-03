@@ -68,6 +68,25 @@
 				网图可在边表结点定义中增加weight数据域，存放权值
 		#十字链表
 			邻接表和逆邻接表结合起来
+			定义顶点表结点结构：
+				data firstin firstout
+					firstin指入边表头指针，指向该顶点的入边表中的第一个结点
+					firstout表示出边表头指针，指向该顶点的出边表中的第一个结点
+			定义边表结点结构：
+				tailvex headvex headlink taillink
+					tailvex指弧起点在顶点表的下标，headvex指弧终点在顶点表中的下标，
+					headlink指入边表指针域，指向终点相同的下一条边
+					taillink指边表指针域，指向起点相同的下一条边
+					如果是网，可以在增加一个weight域来存储权值
 
 			
 		#邻接多重表
+			定义多重链表：
+				ivex ilink jvex jlink
+					ivex和jvex是与某条边依附的两个顶点在顶点表中的下标
+					ilink指向依附顶点ivex的下一条边
+					jlink指向依附顶点jvex的下一条边
+				ilink指向的结点jvex和本身ivex值相同
+
+		#边集数组
+			边集数组是由两个一维数组构成，一个存储顶点信息，另一个存储边的信息，这个边数组每个数据元素由一条边的起点下标、终点下标和权组成
