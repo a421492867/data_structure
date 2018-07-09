@@ -17,6 +17,7 @@
 		CEDA269020BBA6FD00FCF2DC /* LinkedStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA268E20BBA6FD00FCF2DC /* LinkedStack.cpp */; };
 		CEDA269420BBE73500FCF2DC /* SqQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA269220BBE73500FCF2DC /* SqQueue.cpp */; };
 		CEDA269720BCF09F00FCF2DC /* LinkedQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA269520BCF09F00FCF2DC /* LinkedQueue.cpp */; };
+		CEE3D26F20F32EBE00C9C761 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE3D26D20F32EBE00C9C761 /* Graph.cpp */; };
 		CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3B7E020AAD67C007E8FA9 /* main.cpp */; };
 		CEF3B7FE20AAD96C007E8FA9 /* ArrayList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3B7FC20AAD96C007E8FA9 /* ArrayList.cpp */; };
 		CEFEF81E20BF8A0400CB6F1A /* KMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF81C20BF8A0400CB6F1A /* KMP.cpp */; };
@@ -55,6 +56,8 @@
 		CEDA269320BBE73500FCF2DC /* SqQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SqQueue.hpp; sourceTree = "<group>"; };
 		CEDA269520BCF09F00FCF2DC /* LinkedQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedQueue.cpp; sourceTree = "<group>"; };
 		CEDA269620BCF09F00FCF2DC /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
+		CEE3D26D20F32EBE00C9C761 /* Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
+		CEE3D26E20F32EBE00C9C761 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		CEF3B7DD20AAD67C007E8FA9 /* data_structure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = data_structure; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3B7E020AAD67C007E8FA9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CEF3B7FC20AAD96C007E8FA9 /* ArrayList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayList.cpp; sourceTree = "<group>"; };
@@ -136,6 +139,15 @@
 			name = Queue;
 			sourceTree = "<group>";
 		};
+		CEE3D26C20F32E9200C9C761 /* chapter7 */ = {
+			isa = PBXGroup;
+			children = (
+				CEE3D26D20F32EBE00C9C761 /* Graph.cpp */,
+				CEE3D26E20F32EBE00C9C761 /* Graph.hpp */,
+			);
+			name = chapter7;
+			sourceTree = "<group>";
+		};
 		CEF3B7D420AAD67C007E8FA9 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 		CEF3B7DF20AAD67C007E8FA9 /* data_structure */ = {
 			isa = PBXGroup;
 			children = (
+				CEE3D26C20F32E9200C9C761 /* chapter7 */,
 				CEFEF81F20BFD27B00CB6F1A /* chapter6 */,
 				CE6846BC20BE4E38004E0007 /* chapter5 */,
 				CEDA268620B7A8C000FCF2DC /* chapter4 */,
@@ -252,6 +265,7 @@
 			files = (
 				CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */,
 				CEDA269020BBA6FD00FCF2DC /* LinkedStack.cpp in Sources */,
+				CEE3D26F20F32EBE00C9C761 /* Graph.cpp in Sources */,
 				CE6846BF20BE6BE3004E0007 /* HStringIndex.cpp in Sources */,
 				CEFEF81E20BF8A0400CB6F1A /* KMP.cpp in Sources */,
 				CE24FF9320C908BC00F9B84A /* BTree.cpp in Sources */,
