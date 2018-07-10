@@ -4,11 +4,10 @@
 //
 //  Created by ysp on 2018/7/9.
 //  Copyright © 2018年 Lord、y. All rights reserved.
-//
+//  邻接表
 
 #ifndef Graph_hpp
 #define Graph_hpp
-const int MAX_NODE =
 
 #include <stdio.h>
 
