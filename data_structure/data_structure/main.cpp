@@ -44,7 +44,8 @@ int main(int argc, const char * argv[]) {
     //testStackApp();
     //testHStringIndex();
     //testBTree();
-    testBiThrTree();
+    //testBiThrTree();
+    
     
     
 }

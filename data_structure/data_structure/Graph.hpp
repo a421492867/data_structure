@@ -39,8 +39,8 @@ public:
         }
     }
     void createGraph();
-    int locateVex(VertexNode node);
-    int getVex(int index);
+    int locateVex(char node);
+    char getVex(int index);
     bool putVex(int index, int value);
     EdgeNode firstAdjVex(VertexNode node);
     EdgeNode nextAdjVex(VertexNode v, VertexNode w);
