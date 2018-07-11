@@ -47,7 +47,7 @@ int Graph::locateVex(char node){
             return i;
         }
     }
-    return NULL;
+    return -1;
 }
 
 char Graph::getVex(int index){
@@ -72,8 +72,22 @@ char Graph::firstAdjVex(VertexNode node){
     return this -> nodes[node.firstedge -> adjvex].data;
 }
 
-char Graph::nextAdjVex(VertexNode v, VertexNode w){
+char Graph::nextAdjVex(char v, char w){
     
+    int i = locateVex(v);
+    int j = locateVex(w);
+    if(i < 0 || j < 0){
+        return NULL;
+    }
+    
+    EdgeNode *eNode = this -> nodes[i].firstedge;
+    while (eNode != NULL && eNode -> adjvex != j) {
+        eNode = eNode -> next;
+    }
+    while(eNode!= NULL && eNode -> next != NULL){
+        return this -> nodes[eNode -> next -> adjvex].data;
+    }
+
     return NULL;
 }
 

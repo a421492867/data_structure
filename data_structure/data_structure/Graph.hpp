@@ -43,7 +43,7 @@ public:
     char getVex(int index);
     bool putVex(int index, char value);
     char firstAdjVex(VertexNode node);
-    char nextAdjVex(VertexNode v, VertexNode w);
+    char nextAdjVex(char v, char w);
     bool insertVex(VertexNode node);
     bool deleteVex(VertexNode node);
     bool insertArc(VertexNode v, VertexNode w);
