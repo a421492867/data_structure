@@ -57,20 +57,25 @@ char Graph::getVex(int index){
     return this -> nodes[index - 1].data;
 }
 
-bool Graph::putVex(int index, int value){
-    
+bool Graph::putVex(int index, char value){
+    if(index > this -> numVertexes + 1){
+        return false;
+    }
+    this -> nodes[index - 1].data = value;
     return true;
 }
 
-//EdgeNode Graph::firstAdjVex(VertexNode node){
-//    
-//    return NULL;
-//}
-//
-//EdgeNode Graph::nextAdjVex(VertexNode v, VertexNode w){
-//
-//    return NULL;
-//}
+char Graph::firstAdjVex(VertexNode node){
+    if(node.firstedge == NULL){
+        return NULL;
+    }
+    return this -> nodes[node.firstedge -> adjvex].data;
+}
+
+char Graph::nextAdjVex(VertexNode v, VertexNode w){
+    
+    return NULL;
+}
 
 bool Graph::insertVex(VertexNode node){
     
