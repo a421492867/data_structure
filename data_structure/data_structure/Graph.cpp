@@ -73,13 +73,11 @@ char Graph::firstAdjVex(VertexNode node){
 }
 
 char Graph::nextAdjVex(char v, char w){
-    
     int i = locateVex(v);
     int j = locateVex(w);
     if(i < 0 || j < 0){
         return NULL;
     }
-    
     EdgeNode *eNode = this -> nodes[i].firstedge;
     while (eNode != NULL && eNode -> adjvex != j) {
         eNode = eNode -> next;
@@ -87,29 +85,28 @@ char Graph::nextAdjVex(char v, char w){
     while(eNode!= NULL && eNode -> next != NULL){
         return this -> nodes[eNode -> next -> adjvex].data;
     }
-
     return NULL;
 }
 
-bool Graph::insertVex(VertexNode node){
-    
-    return true;
-}
-
-bool Graph::deleteVex(VertexNode node){
-    
-    return true;
-}
-
-bool Graph::insertArc(VertexNode v, VertexNode w){
-    
-    return true;
-}
-
-bool Graph::deleteArc(VertexNode v, VertexNode w){
-    
-    return true;
-}
+//bool Graph::insertVex(VertexNode node){
+//    
+//    return true;
+//}
+//
+//bool Graph::deleteVex(VertexNode node){
+//    //删除结点的同时 需要同时删除边
+//    return true;
+//}
+//
+//bool Graph::insertArc(VertexNode v, VertexNode w){
+//    
+//    return true;
+//}
+//
+//bool Graph::deleteArc(VertexNode v, VertexNode w){
+//    
+//    return true;
+//}
 
 void Graph::DFSTraverse(){
     
