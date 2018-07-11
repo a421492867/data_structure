@@ -38,7 +38,7 @@ public:
             nodes[i].firstedge = NULL;
         }
     }
-    void createGraph(Graph &g);
+    void createGraph();
     int locateVex(VertexNode node);
     int getVex(int index);
     bool putVex(int index, int value);
