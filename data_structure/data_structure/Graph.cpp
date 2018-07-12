@@ -110,9 +110,33 @@ char Graph::nextAdjVex(char v, char w){
 //}
 
 void Graph::DFSTraverse(){
-    
+    bool visited[this -> numVertexes];
+    for(int i = 0; i < this -> numVertexes; i++){
+        visited[i] = false;
+    }
+    for(int i = 0; i < this -> numVertexes; i++){
+        if(!visited[i]){
+            DFS(visited, i);
+        }
+    }
 }
 
+void Graph::DFS(bool *visited, int i){
+    EdgeNode *p;
+    visited[i] = true;
+    cout << this -> nodes[i].data << "," ;
+    p = this -> nodes[i].firstedge;
+    while (p) {
+        if(!visited[p -> adjvex]){
+            DFS(visited, p -> adjvex);
+        }
+        p = p -> next;
+    }
+    cout << endl;
+    
+    
+    
+}
 void Graph::HFSTraverse(){
     
 }

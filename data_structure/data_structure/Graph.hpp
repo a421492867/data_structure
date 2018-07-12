@@ -50,5 +50,6 @@ public:
     bool deleteArc(VertexNode v, VertexNode w);
     void DFSTraverse();
     void HFSTraverse();
+    void DFS(bool *visited, int i);
 };
 
