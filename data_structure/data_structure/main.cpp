@@ -243,6 +243,8 @@ void testGraph(){
     cout << "a 相对于 d 的下一个结点为" << g.nextAdjVex('a', 'd') << endl;
     cout << "深度优先遍历结果为" << endl;
     g.DFSTraverse();
+    cout << "广度优先遍历结果为" << endl;
+    g.HFSTraverse();
     g.putVex(1, 'f');
     cout << "第一个结点为" << g.getVex(1) << endl;
     

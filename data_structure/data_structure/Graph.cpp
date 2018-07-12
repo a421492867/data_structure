@@ -8,6 +8,7 @@
 
 #include "Graph.hpp"
 #include <iostream>
+#include "SqQueue.hpp"
 using namespace std;
 
 void Graph::createGraph(){
@@ -138,5 +139,31 @@ void Graph::DFS(bool *visited, int i){
     
 }
 void Graph::HFSTraverse(){
-    
+    SqQueue q;
+    EdgeNode *p;
+    bool visited[this -> numVertexes];
+    for(int i = 0; i < this -> numVertexes; i++){
+        visited[i] = false;
+    }
+    for(int i = 0; i < this -> numVertexes; i++){
+        if(!visited[i]){
+            visited[i] = true;
+            cout << this -> nodes[i].data << ",";
+            q.EnQueue(i);
+            while(!q.QueueEmpty()){
+                int top = q.GetHead();
+                q.DeQueue();
+                p = this -> nodes[top].firstedge;
+                while (p) {
+                    if(!visited[p -> adjvex]){
+                        visited[p -> adjvex] = true;
+                        cout << this -> nodes[p -> adjvex].data << ",";
+                        q.EnQueue(p -> adjvex);
+                    }
+                    p = p -> next;
+                }
+            }
+            cout << endl;
+        }
+    }
 }
