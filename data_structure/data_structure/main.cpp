@@ -19,6 +19,7 @@
 #include "KMP.hpp"
 #include "BTree.hpp"
 #include "BiThrTree.hpp"
+#include "Graph.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -32,6 +33,7 @@ void testHStringIndex();
 void testKMP();
 void testBTree();
 void testBiThrTree();
+void testGraph();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -45,6 +47,7 @@ int main(int argc, const char * argv[]) {
     //testHStringIndex();
     //testBTree();
     //testBiThrTree();
+    testGraph();
     
     
     
@@ -229,6 +232,18 @@ void testBiThrTree(){
     b.input();
     b.InThreading(b.getRoot());
     b.InOrderTraverse_Thr(b.getRoot());
+}
+
+void testGraph(){
+    Graph g = Graph(20);
+    g.createGraph();
+    cout << "第二个结点为" << g.getVex(2) << endl;
+    cout << "c 位于" << g.locateVex('c') << endl;
+    cout << "a的下一个结点为" << g.firstAdjVex('a') << endl;
+    cout << "a 相对于 d 的下一个结点为" << g.nextAdjVex('a', 'd') << endl;
+    g.putVex(1, 'f');
+    cout << "第一个结点为" << g.getVex(1) << endl;
+    
 }
 
 

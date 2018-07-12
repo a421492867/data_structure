@@ -58,18 +58,19 @@ char Graph::getVex(int index){
 }
 
 bool Graph::putVex(int index, char value){
-    if(index > this -> numVertexes + 1){
+    if(index > this -> numVertexes + 1 || index < 1){
         return false;
     }
     this -> nodes[index - 1].data = value;
     return true;
 }
 
-char Graph::firstAdjVex(VertexNode node){
-    if(node.firstedge == NULL){
+char Graph::firstAdjVex(char node){
+    int index = locateVex(node);
+    if(this -> nodes[index].firstedge == NULL){
         return NULL;
     }
-    return this -> nodes[node.firstedge -> adjvex].data;
+    return this -> nodes[this -> nodes[index].firstedge -> adjvex].data;
 }
 
 char Graph::nextAdjVex(char v, char w){

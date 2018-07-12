@@ -31,7 +31,7 @@ private:
     VertexNode *nodes;
 public:
     Graph(int size){
-        numVertexes = 0;
+        numVertexes = size;
         numEdges = 0;
         nodes = new VertexNode[size];
         for(int i = 0; i < size; i++){
@@ -42,7 +42,7 @@ public:
     int locateVex(char node);
     char getVex(int index);
     bool putVex(int index, char value);
-    char firstAdjVex(VertexNode node);
+    char firstAdjVex(char node);
     char nextAdjVex(char v, char w);
     bool insertVex(VertexNode node);
     bool deleteVex(VertexNode node);
