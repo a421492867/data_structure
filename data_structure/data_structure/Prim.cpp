@@ -10,7 +10,7 @@
 #include <iostream>
 using namespace std;
 
-void Graph::createGraph(){
+void Graph_Prim::createGraph(){
     cout << "请输入结点数量" << endl;
     cin >> this -> numVertexes;
     cout << "请输入结点" << endl;
@@ -34,4 +34,35 @@ void Graph::createGraph(){
         this -> arc[end][start] = weight;
     }
     
+}
+
+void Graph_Prim::miniSpanTree_PRIM(){
+    int min, i, j, k;
+    int adjvex[DEFAULT_SIZE];
+    int lowcost[DEFAULT_SIZE];
+    lowcost[0] = 0;
+    adjvex[0] = 0;
+    for(int i = 1; i < this -> numVertexes; i++){
+        lowcost[i] = this -> arc[0][i];
+        adjvex[i] = 0;
+    }
+    for(int i = 1; i < this -> numVertexes; i++){
+        min = INFINITY;
+        j = 1; k = 0;
+        while(j < this -> numVertexes){
+            if(lowcost[j] != 0 && lowcost[j] < min){
+                min = lowcost[j];
+                k = j;
+            }
+            j++;
+        }
+        cout << adjvex[k] << "," << k << endl;
+        lowcost[k] = 0;
+        for(j = 1; j < this -> numVertexes; j++){
+            if(lowcost[j] != 0 && this -> arc[k][j] < lowcost[j]){
+                lowcost[j] = this -> arc[k][j];
+                adjvex[j] = k;
+            }
+        }
+    }
 }

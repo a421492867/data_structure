@@ -20,6 +20,7 @@
 #include "BTree.hpp"
 #include "BiThrTree.hpp"
 #include "Graph.hpp"
+#include "Prim.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -34,6 +35,7 @@ void testKMP();
 void testBTree();
 void testBiThrTree();
 void testGraph();
+void testPrim();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -47,7 +49,8 @@ int main(int argc, const char * argv[]) {
     //testHStringIndex();
     //testBTree();
     //testBiThrTree();
-    testGraph();
+    //testGraph();
+    testPrim();
     
     
     
@@ -249,6 +252,12 @@ void testGraph(){
     cout << "第一个结点为" << g.getVex(1) << endl;
     
     
+}
+
+void testPrim(){
+    Graph_Prim g;
+    g.createGraph();
+    g.miniSpanTree_PRIM();
 }
 
 

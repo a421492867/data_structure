@@ -14,16 +14,17 @@
 #endif /* Prim_hpp */
 const int INFINITY = 65535;
 const int DEFAULT_SIZE = 30;
-class Graph{
+class Graph_Prim{
 private:
     char vex[DEFAULT_SIZE];
     int arc[DEFAULT_SIZE][DEFAULT_SIZE];
     int numVertexes, numEdges;
 public:
-    Graph(){
+    Graph_Prim(){
         numVertexes = 0;
         numEdges = 0;
     };
     void createGraph();
+    void miniSpanTree_PRIM();
 };
 
