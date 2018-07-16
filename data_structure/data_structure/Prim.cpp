@@ -47,7 +47,7 @@ void Graph_Prim::miniSpanTree_PRIM(){
         adjvex[i] = 0;
     }
     for(int i = 1; i < this -> numVertexes; i++){
-        min = INFINITY;
+        min = INFINITY; 
         int j = 1, k = 0;
         while(j < this -> numVertexes){
             if(lowcost[j] != 0 && lowcost[j] < min){
