@@ -37,18 +37,18 @@ void Graph_Prim::createGraph(){
 }
 
 void Graph_Prim::miniSpanTree_PRIM(){
-    int min, i, j, k;
-    int adjvex[DEFAULT_SIZE];
-    int lowcost[DEFAULT_SIZE];
-    lowcost[0] = 0;
+    int min;
+    int adjvex[this -> numVertexes];
+    int lowcost[this -> numVertexes];
     adjvex[0] = 0;
+    lowcost[0] = 0;
     for(int i = 1; i < this -> numVertexes; i++){
         lowcost[i] = this -> arc[0][i];
         adjvex[i] = 0;
     }
     for(int i = 1; i < this -> numVertexes; i++){
         min = INFINITY;
-        j = 1; k = 0;
+        int j = 1, k = 0;
         while(j < this -> numVertexes){
             if(lowcost[j] != 0 && lowcost[j] < min){
                 min = lowcost[j];
@@ -58,11 +58,13 @@ void Graph_Prim::miniSpanTree_PRIM(){
         }
         cout << adjvex[k] << "," << k << endl;
         lowcost[k] = 0;
-        for(j = 1; j < this -> numVertexes; j++){
+        for(int j = 1; j < this -> numVertexes; j++){
             if(lowcost[j] != 0 && this -> arc[k][j] < lowcost[j]){
                 lowcost[j] = this -> arc[k][j];
                 adjvex[j] = k;
             }
         }
+
     }
+
 }
