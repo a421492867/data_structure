@@ -33,7 +33,10 @@ void Graph_Kru::creteGraph(){
 
 void Graph_Kru::sort_edge(){
     for(int i = 0; i < this -> edgeNum; i++){
-        for(int j = i; i < this -> edgeNum; j++){
+        cout << this -> edge[i].weight << endl;
+    }
+    for(int i = 0; i < this -> edgeNum; i++){
+        for(int j = i; j < this -> edgeNum; j++){
             if(this -> edge[i].weight > this -> edge[j].weight){
                 Edge e = this -> edge[i];
                 this -> edge[i] = this -> edge[j];
@@ -45,17 +48,16 @@ void Graph_Kru::sort_edge(){
 
 void Graph_Kru::kruskal(){
     int i, n, m;
-    Edge edges[this -> edgeNum];
     int parent[vexNum];
     for(i = 0; i < this -> vexNum; i++){
         parent[i] = 0;
     }
     for(i = 0; i < this -> edgeNum; i++){
-        n = find(parent, edges[i].start);
-        m = find(parent, edges[i].end);
+        n = find(parent, this -> edge[i].start);
+        m = find(parent, this -> edge[i].end);
         if(n != m){
             parent[n] = m;
-            cout << edges[i].start << "," << edges[i].end << "," << edges[i].weight;
+            cout << this -> edge[i].start << "," << this -> edge[i].end << "," << this -> edge[i].weight << endl;
         }
     }
     

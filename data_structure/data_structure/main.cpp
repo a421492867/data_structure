@@ -21,6 +21,7 @@
 #include "BiThrTree.hpp"
 #include "Graph.hpp"
 #include "Prim.hpp"
+#include "Kruskal.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -36,6 +37,7 @@ void testBTree();
 void testBiThrTree();
 void testGraph();
 void testPrim();
+void testKruskal();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -50,7 +52,8 @@ int main(int argc, const char * argv[]) {
     //testBTree();
     //testBiThrTree();
     //testGraph();
-    testPrim();
+//    testPrim();
+    testKruskal();
     
     
     
@@ -258,6 +261,14 @@ void testPrim(){
     Graph_Prim g;
     g.createGraph();
     g.miniSpanTree_PRIM();
+}
+
+void testKruskal(){
+    Graph_Kru g = Graph_Kru(9, 15);
+    g.creteGraph();
+    g.sort_edge();
+    g.kruskal();
+    
 }
 
 
