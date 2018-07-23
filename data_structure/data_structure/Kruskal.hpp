@@ -33,4 +33,5 @@ public:
     void creteGraph();
     void sort_edge();
     void kruskal();
+    int find(int *parent, int f);
 };

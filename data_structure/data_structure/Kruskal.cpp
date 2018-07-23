@@ -44,5 +44,26 @@ void Graph_Kru::sort_edge(){
 }
 
 void Graph_Kru::kruskal(){
+    int i, n, m;
+    Edge edges[this -> edgeNum];
+    int parent[vexNum];
+    for(i = 0; i < this -> vexNum; i++){
+        parent[i] = 0;
+    }
+    for(i = 0; i < this -> edgeNum; i++){
+        n = find(parent, edges[i].start);
+        m = find(parent, edges[i].end);
+        if(n != m){
+            parent[n] = m;
+            cout << edges[i].start << "," << edges[i].end << "," << edges[i].weight;
+        }
+    }
     
+}
+
+int Graph_Kru::find(int *parent, int f){
+    while (parent[f] > 0) {
+        f = parent[f];
+    }
+    return f;
 }
