@@ -58,6 +58,8 @@ void Graph_Prim::miniSpanTree_PRIM(){
         }
         cout << adjvex[k] << "," << k << endl;
         lowcost[k] = 0;
+        
+        //更新lowcost数组和adjvex数组 
         for(int j = 1; j < this -> numVertexes; j++){
             if(lowcost[j] != 0 && this -> arc[k][j] < lowcost[j]){
                 lowcost[j] = this -> arc[k][j];
