@@ -264,7 +264,7 @@ void testPrim(){
 }
 
 void testKruskal(){
-    Graph_Kru g = Graph_Kru(5, 5);
+    Graph_Kru g = Graph_Kru(9, 15);
     g.creteGraph();
     g.sort_edge();
     g.kruskal();
