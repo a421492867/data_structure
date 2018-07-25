@@ -53,7 +53,7 @@ int main(int argc, const char * argv[]) {
     //testBiThrTree();
     //testGraph();
 //    testPrim();
-//    testKruskal();
+    testKruskal();
     
     
     
@@ -264,7 +264,7 @@ void testPrim(){
 }
 
 void testKruskal(){
-    Graph_Kru g = Graph_Kru(9, 15);
+    Graph_Kru g = Graph_Kru(5, 5);
     g.creteGraph();
     g.sort_edge();
     g.kruskal();

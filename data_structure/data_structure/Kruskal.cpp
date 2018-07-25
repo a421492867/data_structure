@@ -32,9 +32,9 @@ void Graph_Kru::creteGraph(){
 }
 
 void Graph_Kru::sort_edge(){
-    for(int i = 0; i < this -> edgeNum; i++){
-        cout << this -> edge[i].weight << endl;
-    }
+//    for(int i = 0; i < this -> edgeNum; i++){
+//        cout << this -> edge[i].weight << endl;
+//    }
     for(int i = 0; i < this -> edgeNum; i++){
         for(int j = i; j < this -> edgeNum; j++){
             if(this -> edge[i].weight > this -> edge[j].weight){
@@ -48,6 +48,7 @@ void Graph_Kru::sort_edge(){
 
 void Graph_Kru::kruskal(){
     int i, n, m;
+    //判断边与边是否存在环路
     int parent[vexNum];
     for(i = 0; i < this -> vexNum; i++){
         parent[i] = 0;
@@ -57,7 +58,7 @@ void Graph_Kru::kruskal(){
         m = find(parent, this -> edge[i].end);
         if(n != m){
             parent[n] = m;
-            cout << this -> edge[i].start << "," << this -> edge[i].end << "," << this -> edge[i].weight << endl;
+            cout << this -> edge[i].start << "," << this -> edge[i].end << endl;
         }
     }
     
