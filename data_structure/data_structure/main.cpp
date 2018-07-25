@@ -53,7 +53,7 @@ int main(int argc, const char * argv[]) {
     //testBiThrTree();
     //testGraph();
 //    testPrim();
-    testKruskal();
+//    testKruskal();
     
     
     
