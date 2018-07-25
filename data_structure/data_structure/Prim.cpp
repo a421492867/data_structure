@@ -41,6 +41,7 @@ void Graph_Prim::miniSpanTree_PRIM(){
     int adjvex[this -> numVertexes];
     int lowcost[this -> numVertexes];
     adjvex[0] = 0;
+    //lowcost[i] == 0则说明i已纳入
     lowcost[0] = 0;
     for(int i = 1; i < this -> numVertexes; i++){
         lowcost[i] = this -> arc[0][i];
