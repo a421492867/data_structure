@@ -56,6 +56,8 @@ void Graph_Kru::kruskal(){
     for(i = 0; i < this -> edgeNum; i++){
         n = find(parent, this -> edge[i].start);
         m = find(parent, this -> edge[i].end);
+        
+        //是否属于同一个子集。若不属于同一子集，则可以加线。若属于同一子集，则不可加线，否则会成环
         if(n != m){
             parent[n] = m;
             cout << this -> edge[i].start << "," << this -> edge[i].end << endl;
