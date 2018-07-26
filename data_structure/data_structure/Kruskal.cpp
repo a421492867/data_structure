@@ -59,6 +59,7 @@ void Graph_Kru::kruskal(){
         
         //是否属于同一个子集。若不属于同一子集，则可以加线。若属于同一子集，则不可加线，否则会成环
         if(n != m){
+            //代表元合并到同一集合
             parent[n] = m;
             cout << this -> edge[i].start << "," << this -> edge[i].end << endl;
         }
