@@ -76,5 +76,45 @@ void Graph_Path::Dijkstra(int start){
 }
 
 void Graph_Path::Floyd(){
+    int d[this -> numVertexes][this -> numVertexes];
+    int p[this -> numVertexes][this -> numVertexes];
     
+    for(int i = 0; i < this -> numVertexes; i++){
+        for(int j = 0; j < this -> numVertexes; j++){
+            d[i][j] = this -> arc[i][j];
+            p[i][j] = j;
+            
+        }
+    }
+    
+    for(int i = 0; i < this -> numVertexes; i++){
+        for(int j = 0; j < this -> numVertexes; j++){
+            for(int k = 0; k < this -> numVertexes; k++){
+                if(d[i][k] > d[i][j] + d[j][k]){
+                    d[i][k] = d[i][j] + d[j][k];
+                    p[i][k] = p[i][j];
+                }
+            }
+        }
+    }
+    
+    cout << "各个顶点对的最短路径：" << endl;
+    int row = 0;
+    int col = 0;
+    int temp = 0;
+    for (row = 0; row < this->numVertexes; row++) {
+        for (col = row + 1; col < this->numVertexes; col++) {
+            cout << "v" << to_string(row) << "---" << "v" << to_string(col) << " weight: "
+            << d[row][col] << " path: " << " v" << to_string(row);
+            temp = p[row][col];
+            //循环输出途径的每条路径。
+            while (temp != col) {
+                cout << "-->" << "v" << to_string(temp);
+                temp = p[temp][col];
+            }
+            cout << "-->" << "v" << to_string(col) << endl;
+        }
+        
+        cout << endl;
+    }
 }
