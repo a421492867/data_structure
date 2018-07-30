@@ -27,4 +27,5 @@ public:
     };
     void createGraph();
     void Dijkstra(int v0);
+    void Floyd();
 };

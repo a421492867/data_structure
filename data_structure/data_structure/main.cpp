@@ -40,6 +40,7 @@ void testGraph();
 void testPrim();
 void testKruskal();
 void testDijkstra();
+void testFloyd();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -56,7 +57,8 @@ int main(int argc, const char * argv[]) {
     //testGraph();
 //    testPrim();
 //    testKruskal();
-    testDijkstra();
+//    testDijkstra();
+    testFloyd();
     
     
     
@@ -278,6 +280,12 @@ void testDijkstra(){
     Graph_Path g;
     g.createGraph();
     g.Dijkstra(0);
+}
+
+void testFloyd(){
+    Graph_Path g;
+    g.createGraph();
+    g.Floyd();
 }
 
 

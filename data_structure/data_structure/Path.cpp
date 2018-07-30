@@ -74,3 +74,7 @@ void Graph_Path::Dijkstra(int start){
     for (int i = 0; i < this -> numVertexes; i++)
         cout << "  shortest(" << this -> vex[start] << ", " << this -> vex[i] << ")=" << dist[i] << endl;
 }
+
+void Graph_Path::Floyd(){
+    
+}
