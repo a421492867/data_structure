@@ -48,12 +48,6 @@ void Graph_Prim::miniSpanTree_PRIM(){
         adjvex[i] = 0;
     }
     for(int i = 1; i < this -> numVertexes; i++){
-//        for(int i = 0; i < this -> numVertexes; i++){
-//            cout<< "lowcost[" << i << "] = " << lowcost[i] << endl;
-//        }
-//        for(int i = 0; i < this -> numVertexes; i++){
-//            cout<< "adjvex[" << i << "] = " << adjvex[i] << endl;
-//        }
         min = INFINITY; 
         int j = 1, k = 0;
         while(j < this -> numVertexes){

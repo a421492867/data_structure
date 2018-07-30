@@ -39,7 +39,9 @@ void Graph_Path::Dijkstra(int start){
     int dist[this -> numVertexes];
     int min, temp;
     int k;
-    int flag[this -> numVertexes];
+    int flag[this -> numVertexes]; // flag[i]=1表示"顶点vs"到"顶点i"的最短路径已成功获取。
+    
+    //init
     for(int i = 0; i < this -> numVertexes; i++){
         flag[i] = 0;
         prev[i] = 0;
@@ -49,6 +51,8 @@ void Graph_Path::Dijkstra(int start){
     flag[start] = 1;
     dist[start] = 0;
     for(int i = 1; i < this -> numVertexes; i++){
+        // 寻找当前最小的路径；
+        // 即，在未获取最短路径的顶点中，找到离vs最近的顶点(k)。
         min = P_INFINITY;
         for(int j = 0; j < this -> numVertexes; j++){
             if(flag[j] == 0 && dist[j] < min){
@@ -57,7 +61,8 @@ void Graph_Path::Dijkstra(int start){
             }
         }
         flag[k] = 1;
-        
+        // 修正当前最短路径和前驱顶点
+        // 即，当已经"顶点k的最短路径"之后，更新"未获取最短路径的顶点的最短路径和前驱顶点"。
         for(int j = 0; j < this -> numVertexes; j++){
             if(flag[j] == 0 && min + this -> arc[k][j] < dist[j]){
                 dist[j] = min + this -> arc[k][j];
