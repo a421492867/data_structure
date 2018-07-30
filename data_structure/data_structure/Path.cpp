@@ -34,32 +34,38 @@ void Graph_Path::createGraph(){
     }
 }
 
-void Graph_Path::Dijkstra(int v0){
-    int Pathmatirx[this -> numVertexes]; //用于存储最短路径下标的数组
-    int ShortPathTable[this -> numVertexes]; //用于存储到各点路径权值和
-    int v, w, k, min;
-    int final[this -> numVertexes];
-    for(v = 0; v < this -> numVertexes; v++){
-        final[v] = 0;
-        ShortPathTable[v] = this -> arc[v0][v];
-        Pathmatirx[v] = 0;
+void Graph_Path::Dijkstra(int start){
+    int prev[this -> numVertexes];
+    int dist[this -> numVertexes];
+    int min, temp;
+    int k;
+    int flag[this -> numVertexes];
+    for(int i = 0; i < this -> numVertexes; i++){
+        flag[i] = 0;
+        prev[i] = 0;
+        dist[i] = this -> arc[start][i];
     }
-    ShortPathTable[v0] = 0;
-    final[v0] = 1;
-    for(v = 1; v < this -> numVertexes; v++){
+    
+    flag[start] = 1;
+    dist[start] = 0;
+    for(int i = 1; i < this -> numVertexes; i++){
         min = P_INFINITY;
-        for(w = 0; w < this -> numVertexes; w++){
-            if(!final[w] && ShortPathTable[w] < min){
-                k = w;
-                min = ShortPathTable[w];
+        for(int j = 0; j < this -> numVertexes; j++){
+            if(flag[j] == 0 && dist[j] < min){
+                min = dist[j];
+                k = j;
             }
         }
-        final[k] = 1;
-        for(w = 0; w < this -> numVertexes; w++){
-            if(!final[w] && (min + this -> arc[k][w] < ShortPathTable[w])){
-                ShortPathTable[w] = min + this -> arc[k][w];
-                Pathmatirx[w] = k;
+        flag[k] = 1;
+        
+        for(int j = 0; j < this -> numVertexes; j++){
+            if(flag[j] == 0 && min + this -> arc[k][j] < dist[j]){
+                dist[j] = min + this -> arc[k][j];
+                prev[j] = k;
             }
         }
     }
+    cout << "dijkstra(" << this -> vex[start] << "): " << endl;
+    for (int i = 0; i < this -> numVertexes; i++)
+        cout << "  shortest(" << this -> vex[start] << ", " << this -> vex[i] << ")=" << dist[i] << endl;
 }

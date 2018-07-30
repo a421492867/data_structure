@@ -22,6 +22,7 @@
 #include "Graph.hpp"
 #include "Prim.hpp"
 #include "Kruskal.hpp"
+#include "Path.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -38,6 +39,7 @@ void testBiThrTree();
 void testGraph();
 void testPrim();
 void testKruskal();
+void testDijkstra();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -53,7 +55,8 @@ int main(int argc, const char * argv[]) {
     //testBiThrTree();
     //testGraph();
 //    testPrim();
-    testKruskal();
+//    testKruskal();
+    testDijkstra();
     
     
     
@@ -269,6 +272,12 @@ void testKruskal(){
     g.sort_edge();
     g.kruskal();
     
+}
+
+void testDijkstra(){
+    Graph_Path g;
+    g.createGraph();
+    g.Dijkstra(0);
 }
 
 
