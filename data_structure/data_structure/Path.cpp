@@ -104,16 +104,16 @@ void Graph_Path::Floyd(){
     cout << "各个顶点对的最短路径：" << endl;
     for(int i = 0; i < this -> numVertexes; ++i){
         for(int j = i + 1; j < this -> numVertexes; j++){
-            cout << i << "-" << j << " weight : " << d[i][j];
+            cout << " " << i << " - " << j << " weight : " << d[i][j];
             k = p[i][j];
             cout << "  path : " << i;
             while(k != j){
                 cout << " - > " << k;
                 k = p[k][j];
             }
-            cout << " - > " << j;
+            cout << " - > " << j << "\n" << endl;
         }
-        cout << endl;
+        cout << "\n" << endl;
     }
     
     
