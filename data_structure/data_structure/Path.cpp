@@ -87,34 +87,64 @@ void Graph_Path::Floyd(){
         }
     }
     
-    for(int i = 0; i < this -> numVertexes; i++){
-        for(int j = 0; j < this -> numVertexes; j++){
-            for(int k = 0; k < this -> numVertexes; k++){
-                if(d[i][k] > d[i][j] + d[j][k]){
-                    d[i][k] = d[i][j] + d[j][k];
-                    p[i][k] = p[i][j];
+    for(int k = 0; k < this -> numVertexes; ++k){
+        for(int i = 0; i < this -> numVertexes; ++i){
+            for(int j = 0; j < this -> numVertexes; ++j){
+                if(d[i][j] > d[i][k] + d[k][j]){
+                    d[i][j] = d[i][k] + d[k][j];
+                    p[i][j] = p[i][k];
                 }
             }
         }
     }
     
+    
+   
+    int k;
     cout << "各个顶点对的最短路径：" << endl;
-    int row = 0;
-    int col = 0;
-    int temp = 0;
-    for (row = 0; row < this->numVertexes; row++) {
-        for (col = row + 1; col < this->numVertexes; col++) {
-            cout << "v" << to_string(row) << "---" << "v" << to_string(col) << " weight: "
-            << d[row][col] << " path: " << " v" << to_string(row);
-            temp = p[row][col];
-            //循环输出途径的每条路径。
-            while (temp != col) {
-                cout << "-->" << "v" << to_string(temp);
-                temp = p[temp][col];
+    for(int i = 0; i < this -> numVertexes; ++i){
+        for(int j = i + 1; j < this -> numVertexes; j++){
+            cout << i << "-" << j << " weight : " << d[i][j];
+            k = p[i][j];
+            cout << "  path : " << i;
+            while(k != j){
+                cout << " - > " << k;
+                k = p[k][j];
             }
-            cout << "-->" << "v" << to_string(col) << endl;
+            cout << " - > " << j;
         }
-        
         cout << endl;
     }
+    
+    
+//    for(int i = 0; i < this -> numVertexes; i++){
+//        for(int j = 0; j < this -> numVertexes; j++){
+//            for(int k = 0; k < this -> numVertexes; k++){
+//                if(d[i][k] > d[i][j] + d[j][k]){
+//                    d[i][k] = d[i][j] + d[j][k];
+//                    p[i][k] = p[i][j];
+//                }
+//            }
+//        }
+//    }
+//
+//    cout << "各个顶点对的最短路径：" << endl;
+//    int row = 0;
+//    int col = 0;
+//    int temp = 0;
+//    for (row = 0; row < this->numVertexes; row++) {
+//        for (col = row + 1; col < this->numVertexes; col++) {
+//            cout << "v" << to_string(row) << "---" << "v" << to_string(col) << " weight: "
+//            << d[row][col] << " path: " << " v" << to_string(row);
+//            temp = p[row][col];
+//            //循环输出途径的每条路径。
+//            while (temp != col) {
+//                cout << "-->" << "v" << to_string(temp);
+//                temp = p[temp][col];
+//            }
+//            cout << "-->" << "v" << to_string(col) << endl;
+//        }
+//
+//        cout << endl;
+//    }
 }
