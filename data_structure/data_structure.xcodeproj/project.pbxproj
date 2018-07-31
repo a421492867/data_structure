@@ -14,6 +14,7 @@
 		CE6C17B120F8498000DB7EEF /* Prim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6C17AF20F8498000DB7EEF /* Prim.cpp */; };
 		CE87F6CB2101B8D100C1C324 /* Kruskal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE87F6C92101B8D100C1C324 /* Kruskal.cpp */; };
 		CE87F6CE210AB9D200C1C324 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE87F6CC210AB9D200C1C324 /* Path.cpp */; };
+		CE87F6D12110620300C1C324 /* AOV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE87F6CF2110620300C1C324 /* AOV.cpp */; };
 		CEDA268120AC03F200FCF2DC /* ChainList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA267F20AC03F200FCF2DC /* ChainList.cpp */; };
 		CEDA268520B53BD200FCF2DC /* StaticLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA268320B53BD200FCF2DC /* StaticLinkList.cpp */; };
 		CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA268B20BB964900FCF2DC /* SqStack.cpp */; };
@@ -53,6 +54,8 @@
 		CE87F6CA2101B8D100C1C324 /* Kruskal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Kruskal.hpp; sourceTree = "<group>"; };
 		CE87F6CC210AB9D200C1C324 /* Path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
 		CE87F6CD210AB9D200C1C324 /* Path.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Path.hpp; sourceTree = "<group>"; };
+		CE87F6CF2110620300C1C324 /* AOV.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AOV.cpp; sourceTree = "<group>"; };
+		CE87F6D02110620300C1C324 /* AOV.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AOV.hpp; sourceTree = "<group>"; };
 		CEDA267F20AC03F200FCF2DC /* ChainList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChainList.cpp; sourceTree = "<group>"; };
 		CEDA268020AC03F200FCF2DC /* ChainList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChainList.hpp; sourceTree = "<group>"; };
 		CEDA268320B53BD200FCF2DC /* StaticLinkList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticLinkList.cpp; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				CE87F6CA2101B8D100C1C324 /* Kruskal.hpp */,
 				CE87F6CC210AB9D200C1C324 /* Path.cpp */,
 				CE87F6CD210AB9D200C1C324 /* Path.hpp */,
+				CE87F6CF2110620300C1C324 /* AOV.cpp */,
+				CE87F6D02110620300C1C324 /* AOV.hpp */,
 			);
 			name = chapter7;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				CE87F6CE210AB9D200C1C324 /* Path.cpp in Sources */,
 				CE6846BF20BE6BE3004E0007 /* HStringIndex.cpp in Sources */,
 				CEFEF81E20BF8A0400CB6F1A /* KMP.cpp in Sources */,
+				CE87F6D12110620300C1C324 /* AOV.cpp in Sources */,
 				CE24FF9320C908BC00F9B84A /* BTree.cpp in Sources */,
 				CEF3B7E120AAD67C007E8FA9 /* main.cpp in Sources */,
 				CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */,
