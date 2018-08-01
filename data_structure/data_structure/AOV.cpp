@@ -35,4 +35,5 @@ void AOVGraph::createGraph(){
 
 bool AOVGraph::topoLogicSort(){
     
+    return true;
 }
