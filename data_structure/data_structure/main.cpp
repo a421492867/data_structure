@@ -23,6 +23,7 @@
 #include "Prim.hpp"
 #include "Kruskal.hpp"
 #include "Path.hpp"
+#include "AOV.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -41,6 +42,7 @@ void testPrim();
 void testKruskal();
 void testDijkstra();
 void testFloyd();
+void testTopo();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -58,7 +60,8 @@ int main(int argc, const char * argv[]) {
 //    testPrim();
 //    testKruskal();
 //    testDijkstra();
-    testFloyd();
+//    testFloyd();
+    testTopo();
     
     
     
@@ -286,6 +289,13 @@ void testFloyd(){
     Graph_Path g;
     g.createGraph();
     g.Floyd();
+}
+void testTopo(){
+    AOVGraph g = AOVGraph(7);
+    g.createGraph();
+    if(g.topoLogicSort()){
+        cout <<"拓扑排序成功" << endl;
+    }
 }
 
 

@@ -46,7 +46,7 @@ void SqStack::Pop(){
 
 int SqStack::StackLength(){
     if(top == -1){
-        cout << "Stack is Null" << endl;
+        //cout << "Stack is Null" << endl;
         return NULL;
     }
     return this -> top + 1;

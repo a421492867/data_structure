@@ -7,6 +7,7 @@
 //
 
 #include "AOV.hpp"
+#include "SqStack.hpp"
 #include <iostream>
 using namespace std;
 
@@ -23,8 +24,8 @@ void AOVGraph::createGraph(){
     this -> numEdges = num;
     for(int i = 0; i < this -> numEdges; i++){
         cout << "请输入边序" << endl;
-        int start, end, in;
-        cin >> start >> end >> in;
+        int start, end;
+        cin >> start >> end;
         AOVEdge *e = new AOVEdge;
         e -> adjvex = end;
         e -> next = this -> nodes[start].firstEdge;
@@ -34,6 +35,30 @@ void AOVGraph::createGraph(){
 }
 
 bool AOVGraph::topoLogicSort(){
-    
+    SqStack stack = SqStack();
+    int count = 0;
+    AOVEdge *e = new AOVEdge;
+    for(int i  = 0; i < this -> numVertexes; i++){
+        if(this -> nodes[i].in == 0){
+            stack.Push(i);
+        }
+    }
+    while(stack.StackLength()){
+        int top = stack.GetTop();
+        stack.Pop();
+        cout << this -> nodes[top].data << "(" << top << ")" << " - >" ;
+        count ++;
+        e = nodes[top].firstEdge;
+        while(e){
+            int k = e -> adjvex;
+            if(--this -> nodes[k].in == 0){
+                stack.Push(k);
+            }
+            e = e -> next;
+        }
+    }
+    if(count < this -> numVertexes){
+        return false;
+    }
     return true;
 }
