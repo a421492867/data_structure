@@ -20,7 +20,7 @@ struct AOVEdge{
 
 struct AOVNode{
     int in;
-    int data;
+    char data;
     AOVEdge *firstEdge;
 };
 
