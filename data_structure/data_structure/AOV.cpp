@@ -22,14 +22,14 @@ void AOVGraph::createGraph(){
     cin >> num;
     this -> numEdges = num;
     for(int i = 0; i < this -> numEdges; i++){
-        cout << "请输入边序对及入度" << endl;
+        cout << "请输入边序" << endl;
         int start, end, in;
         cin >> start >> end >> in;
         AOVEdge *e = new AOVEdge;
         e -> adjvex = end;
         e -> next = this -> nodes[start].firstEdge;
         this -> nodes[start].firstEdge = e;
-        this -> nodes[start].in = in;
+        this -> nodes[end].in += 1;
     }
 }
 
