@@ -76,5 +76,34 @@ bool AOEGraph::topo_AOE(){
 }
 
 void AOEGraph::criticalPath(){
-    
+    AOEEdge *e = new AOEEdge;
+    int ete, lte;
+    topo_AOE();
+    ltv = new int[this -> numVertexes];
+    for(int i = 0; i < this -> numVertexes; i++){
+        ltv[i] = etv[this -> numVertexes - 1];
+    }
+    while(stack2.StackLength()){
+        int top = stack2.GetTop();
+        stack2.Pop();
+        e = this -> nodes[top].firstEdge;
+        while(e){
+            int k = e -> adjvex;
+            if(ltv[k] - e -> weight < ltv[top]){
+                ltv[top] = ltv[k] - e -> weight;
+            }
+            e = e -> next;
+        }
+    }
+    for(int i = 0; i < this -> numVertexes; i++){
+        for(e = this -> nodes[i].firstEdge; e; e = e -> next){
+            int k = e -> adjvex;
+            ete = etv[i];
+            lte = ltv[k] - e -> weight;
+            if(ete == lte){
+                cout << "<" << this -> nodes[i].data << "," << this -> nodes[k].data << ">" << " length : " << e -> weight;
+            }
+        }
+    }
+    cout << endl;
 }
