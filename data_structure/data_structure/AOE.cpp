@@ -9,11 +9,10 @@
 #include "AOE.hpp"
 #include <iostream>
 #include <stdio.h>
-#include <stdlib.h>
+#include "SqStack.hpp"
 using namespace std;
-int *stack2;
+SqStack stack2;
 int *etv, *ltv;
-int top2;
 void AOEGraph::createGraph(){
     cout << "请输入结点" << endl;
     string s;
@@ -36,4 +35,46 @@ void AOEGraph::createGraph(){
         this -> nodes[start].firstEdge = e;
         this -> nodes[end].in += 1;
     }
+}
+
+bool AOEGraph::topo_AOE(){
+    SqStack stack = SqStack();
+    int count = 0;
+    AOEEdge *e = new AOEEdge;
+    for(int i  = 0; i < this -> numVertexes; i++){
+        if(this -> nodes[i].in == 0){
+            stack.Push(i);
+        }
+    }
+    etv = new int[this -> numVertexes];
+    for (int i = 0; i < this -> numVertexes; i++) {
+        etv[i] = 0;
+    }
+    stack2 = SqStack();
+    while(stack.StackLength()){
+        int top = stack.GetTop();
+        stack.Pop();
+        cout << this -> nodes[top].data << "(" << top << ")" << " - >" ;
+        count ++;
+        stack2.Push(top);
+        e = nodes[top].firstEdge;
+        while(e){
+            int k = e -> adjvex;
+            if(--this -> nodes[k].in == 0){
+                stack.Push(k);
+            }
+            if((etv[top] + e -> weight) > etv[k]){
+                etv[k] = etv[top] + e -> weight;
+            }
+            e = e -> next;
+        }
+    }
+    if(count < this -> numVertexes){
+        return false;
+    }
+    return true;
+}
+
+void AOEGraph::criticalPath(){
+    
 }
