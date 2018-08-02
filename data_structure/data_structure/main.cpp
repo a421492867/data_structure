@@ -24,6 +24,7 @@
 #include "Kruskal.hpp"
 #include "Path.hpp"
 #include "AOV.hpp"
+#include "AOE.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -43,6 +44,7 @@ void testKruskal();
 void testDijkstra();
 void testFloyd();
 void testTopo();
+void testAOE();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -61,7 +63,8 @@ int main(int argc, const char * argv[]) {
 //    testKruskal();
 //    testDijkstra();
 //    testFloyd();
-    testTopo();
+//    testTopo();
+    testAOE();
     
     
     
@@ -296,6 +299,11 @@ void testTopo(){
     if(g.topoLogicSort()){
         cout <<"拓扑排序成功" << endl;
     }
+}
+void testAOE(){
+    AOEGraph g = AOEGraph(10);
+    g.createGraph();
+    g.criticalPath();
 }
 
 

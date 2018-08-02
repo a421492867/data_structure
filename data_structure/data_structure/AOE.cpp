@@ -54,7 +54,7 @@ bool AOEGraph::topo_AOE(){
     while(stack.StackLength()){
         int top = stack.GetTop();
         stack.Pop();
-        cout << this -> nodes[top].data << "(" << top << ")" << " - >" ;
+//        cout << this -> nodes[top].data << "(" << top << ")" << " - >" ;
         count ++;
         stack2.Push(top);
         e = nodes[top].firstEdge;
