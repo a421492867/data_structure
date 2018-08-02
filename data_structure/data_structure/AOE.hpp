@@ -41,6 +41,8 @@ public:
     }
     
     void createGraph();
+    bool topo_AOE();
+    void criticalPath();
     
     
     

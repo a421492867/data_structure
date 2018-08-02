@@ -8,7 +8,12 @@
 
 #include "AOE.hpp"
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
+int *stack2;
+int *etv, *ltv;
+int top2;
 void AOEGraph::createGraph(){
     cout << "请输入结点" << endl;
     string s;
