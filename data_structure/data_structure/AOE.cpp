@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include "SqStack.hpp"
 using namespace std;
-SqStack stack2;
+SqStack stack2; //用于存储拓扑序列
 int *etv, *ltv;
 void AOEGraph::createGraph(){
     cout << "请输入结点" << endl;
@@ -63,6 +63,8 @@ bool AOEGraph::topo_AOE(){
             if(--this -> nodes[k].in == 0){
                 stack.Push(k);
             }
+            
+            //事件的最早发生时间应该在前置所有都发生完毕后
             if((etv[top] + e -> weight) > etv[k]){
                 etv[k] = etv[top] + e -> weight;
             }
@@ -90,6 +92,7 @@ void AOEGraph::criticalPath(){
         while(e){
             int k = e -> adjvex;
             if(ltv[k] - e -> weight < ltv[top]){
+                //事件的最晚发生时间
                 ltv[top] = ltv[k] - e -> weight;
             }
             e = e -> next;
@@ -98,7 +101,9 @@ void AOEGraph::criticalPath(){
     for(int i = 0; i < this -> numVertexes; i++){
         for(e = this -> nodes[i].firstEdge; e; e = e -> next){
             int k = e -> adjvex;
+            //活动最早发生时间
             ete = etv[i];
+            //活动最晚发生时间
             lte = ltv[k] - e -> weight;
             if(ete == lte){
                 cout << "<" << this -> nodes[i].data << "," << this -> nodes[k].data << ">" << " length : " << e -> weight;
