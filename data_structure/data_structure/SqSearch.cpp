@@ -76,6 +76,7 @@ int Sq_Search::Fibonacci_Search(int *a,int n,int key){
     while(n>F[k]-1){
         k++;
     }
+    //补全数组。称为fibonacci值长度的数组
     for (i=n;i<F[k]-1;i++){
         a[i]=a[n];
     }
@@ -97,7 +98,7 @@ int Sq_Search::Fibonacci_Search(int *a,int n,int key){
             if (mid<=n)
                 return mid;        /* 若相等则说明mid即为查找到的位置 */
             else
-                return n;
+                return n;           /* mid > n的话说明最后一位就是 */
         }
         
     }
