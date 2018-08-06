@@ -25,6 +25,7 @@
 #include "Path.hpp"
 #include "AOV.hpp"
 #include "AOE.hpp"
+#include "SqSearch.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -45,6 +46,7 @@ void testDijkstra();
 void testFloyd();
 void testTopo();
 void testAOE();
+void testSqSearch();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -64,7 +66,8 @@ int main(int argc, const char * argv[]) {
 //    testDijkstra();
 //    testFloyd();
 //    testTopo();
-    testAOE();
+//    testAOE();
+    testSqSearch();
     
     
     
@@ -304,6 +307,20 @@ void testAOE(){
     AOEGraph g = AOEGraph(10);
     g.createGraph();
     g.criticalPath();
+}
+void testSqSearch(){
+    int a[6] = {NULL, 1,3,5,10,4};
+    Sq_Search s;
+    int result = s.Sequential_Search(a, 5, 10);
+    if(result != 0){
+        cout << result << endl;
+    }else{
+        cout << "无此数据" << endl;
+    }
+    
+    cout << s.Sequential_Search2(a, 5, 10) << endl;
+    
+    
 }
 
 
