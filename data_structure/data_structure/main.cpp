@@ -325,6 +325,8 @@ void testSqSearch(){
     cout << binary_result << endl;
     cout << s.insert_search(v, 9, 6) << endl;
     
+    cout << s.Fibonacci_Search(v, 9, 6) << endl;
+    
     
 }
 
