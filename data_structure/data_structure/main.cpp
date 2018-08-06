@@ -323,6 +323,7 @@ void testSqSearch(){
     int v[10] = {NULL, 1,5,6,8,10,13,24,30,45};
     int binary_result = s.binary_search(v, 9, 6);
     cout << binary_result << endl;
+    cout << s.insert_search(v, 9, 6) << endl;
     
     
 }

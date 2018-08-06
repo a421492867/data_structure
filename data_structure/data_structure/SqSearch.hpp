@@ -18,4 +18,5 @@ public:
     int Sequential_Search(int *a,int n, int key);
     int Sequential_Search2(int *a,int n, int key);
     int binary_search(int *a, int n, int key);
+    int insert_search(int *a, int n, int key);
 };
