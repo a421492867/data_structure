@@ -23,6 +23,9 @@ class BST{
 private:
     BSTNode *root;
 public:
+    BST(){
+        root = new BSTNode();
+    }
     bool insert(int key);
     int search(int key);
     bool deleteBST(int key);
