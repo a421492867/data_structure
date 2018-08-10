@@ -7,3 +7,17 @@
 //
 
 #include "BST.hpp"
+#include <iostream>
+using namespace std;
+bool BST::insert(int key){
+    
+    return true;
+}
+
+int BST::search(int key){
+    return 0;
+}
+
+bool BST::deleteBST(int key){
+    return true;
+}
