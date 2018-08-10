@@ -89,15 +89,15 @@ bool BST::deleteBST(int key){
     }
     return true;
 }
-void BST::preOrder(BSTNode *root){
-    if(this -> root == NULL){
-        return;
-    }
-    cout << this -> root -> data << endl;
-    preOrder(this -> root -> left);
-    preOrder(this -> root -> right);
-}
-
-BSTNode* BST::getRoot(){
-    return this -> root;
-}
+//void BST::preOrder(BSTNode *root){
+//    if(root == NULL){
+//        return;
+//    }
+//    cout << root -> data << endl;
+//    preOrder(root -> left);
+//    preOrder(root -> right);
+//}
+//
+//BSTNode* BST::getRoot(){
+//    return this -> root;
+//}
