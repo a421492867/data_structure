@@ -28,7 +28,7 @@ public:
         
     }
     bool insert(int key);
-    bool search(BSTNode *root, int key, BSTNode parent, BSTNode *node);
+    bool search(int key, BSTNode *&p);
     bool deleteBST(int key);
     void preOrder(BSTNode *root);
     BSTNode* getRoot();

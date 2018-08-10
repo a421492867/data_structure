@@ -10,26 +10,83 @@
 #include <iostream>
 using namespace std;
 bool BST::insert(int key){
-    return true;
+    BSTNode *p = NULL, *q;
+    q = this -> root;
+    if(!search(key, p)){
+        BSTNode *r = new BSTNode();
+        r -> data = key;
+        if(q == NULL){
+            this -> root = r;
+            return true;
+        }
+        if(p && key < p -> data){
+            p -> left = r;
+            return true;
+        }else if (p && key > p -> data){
+            p -> right = r;
+            return true;
+        }
+    }
+    return false;
 }
 
-bool BST::search(BSTNode *root, int key, BSTNode parent, BSTNode *node){
-    if(!root){
-        *node = parent;
-        return false;
-    }else if (key == root -> data){
-        node = root;
-        return true;
-    }else if (key < root -> data){
-        search(root -> left, key, *root, node);
-    }else{
-        search(root -> right, key, *root, node);
+bool BST::search(int key, BSTNode *&p){
+    BSTNode *q = NULL;
+    q = this -> root;
+    while(q){
+        p = q;
+        if(q -> data == key){
+            return true;
+        }else if (q -> data > key){
+            q = q -> left;
+        }else{
+            q = q -> right;
+        }
     }
     return false;
 
 }
 
 bool BST::deleteBST(int key){
+    BSTNode *f,*p,*q,*s;
+    p = this -> root;
+    f = NULL;
+    while(p && p -> data != key){
+        f = p;
+        if(p -> data > key){
+            p = p -> left;
+        }else{
+            p = p -> right;
+        }
+    }
+    if(!p){
+        return false;
+    }
+    if(!p -> left){
+        if(!f){
+            root = p -> right;
+        }else if (f -> left == p){
+            f -> left = p -> right;
+        }else{
+            f -> right = p -> right;
+        }
+        delete p;
+    }
+    else{
+        q = p;
+        s = p -> left;
+        while(s -> right){
+            q = s;
+            s = s -> right;
+        }
+        if(q == p){
+            q -> left = s -> left;
+        }else{
+            q -> right = s -> left;
+        }
+        p -> data = s -> data;
+        delete s;
+    }
     return true;
 }
 void BST::preOrder(BSTNode *root){

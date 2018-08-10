@@ -336,8 +336,15 @@ void testBST(){
     BST t = BST();
     BSTNode parent;
     BSTNode *node = new BSTNode();
+    t.insert(5);
+    t.insert(20);
+    t.insert(3);
+    t.insert(7);
+    t.insert(4);
+    t.insert(34);
     bool num = t.search(t.getRoot(), 20, parent, node);
     cout << num << endl;
+    t.preOrder(t.getRoot());
     
 }
 
