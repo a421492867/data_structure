@@ -25,9 +25,12 @@ private:
 public:
     BST(){
         root = new BSTNode();
+        
     }
     bool insert(int key);
-    int search(int key);
+    bool search(BSTNode *root, int key, BSTNode parent, BSTNode *node);
     bool deleteBST(int key);
+    void preOrder(BSTNode *root);
+    BSTNode* getRoot();
     
 };

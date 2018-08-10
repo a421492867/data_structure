@@ -26,6 +26,7 @@
 #include "AOV.hpp"
 #include "AOE.hpp"
 #include "SqSearch.hpp"
+#include "BST.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -47,6 +48,7 @@ void testFloyd();
 void testTopo();
 void testAOE();
 void testSqSearch();
+void testBST();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -67,7 +69,8 @@ int main(int argc, const char * argv[]) {
 //    testFloyd();
 //    testTopo();
 //    testAOE();
-    testSqSearch();
+//    testSqSearch();
+    testBST();
     
     
     
@@ -327,6 +330,14 @@ void testSqSearch(){
     
     cout << s.Fibonacci_Search(v, 9, 6) << endl;
     
+    
+}
+void testBST(){
+    BST t = BST();
+    BSTNode parent;
+    BSTNode *node = new BSTNode();
+    bool num = t.search(t.getRoot(), 20, parent, node);
+    cout << num << endl;
     
 }
 
