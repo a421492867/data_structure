@@ -66,7 +66,7 @@ bool BST::deleteBST(int key){
     }
     if(!p -> left){
         if(!f){
-            root = p -> right;
+            this -> root = p -> right;
         }else if (f -> left == p){
             f -> left = p -> right;
         }else{
