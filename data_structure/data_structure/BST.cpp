@@ -35,6 +35,7 @@ bool BST::search(int key, BSTNode *&p){
     q = this -> root;
     while(q){
         //当前结点
+        //p为插入操作提供方便
         p = q;
         if(q -> data == key){
             return true;
