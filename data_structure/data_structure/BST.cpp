@@ -51,8 +51,8 @@ bool BST::search(int key, BSTNode *&p){
 
 bool BST::deleteBST(int key){
     BSTNode *f,*p,*q,*s;
-    p = this -> root;
-    f = NULL;
+    p = this -> root;   //最终为当前key的结点
+    f = NULL;//f为当前key的结点的双亲
     while(p && p -> data != key){
         f = p;
         if(p -> data > key){
@@ -64,6 +64,7 @@ bool BST::deleteBST(int key){
     if(!p){
         return false;
     }
+    //若当前结点无左子树
     if(!p -> left){
         if(!f){
             this -> root = p -> right;
