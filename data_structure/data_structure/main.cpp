@@ -342,10 +342,10 @@ void testBST(){
     t.insert(7);
     t.insert(4);
     t.insert(34);
-    bool num = t.search(20, p);
+    bool num = t.search(4, p);
     cout << num << endl;
-    t.deleteBST(20);
-    cout << t.search(20, p) << endl;
+    t.deleteBST(4);
+    cout << t.search(4, p) << endl;
 //    t.preOrder(t.getRoot());
     
 }
