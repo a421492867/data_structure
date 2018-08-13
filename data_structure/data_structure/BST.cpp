@@ -85,11 +85,13 @@ bool BST::deleteBST(int key){
     else{
         q = p;
         s = p -> left;
+        //s最终为直接前驱结点
         while(s -> right){
             q = s;
             s = s -> right;
         }
         if(q == p){
+            //p == q 则说明while没有走，说明s就是直接前驱，直接删掉s结点，并将s的左子树全部给到p
             q -> left = s -> left;
         }else{
             q -> right = s -> left;
