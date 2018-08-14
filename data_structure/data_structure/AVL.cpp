@@ -6,6 +6,9 @@
 //  Copyright © 2018年 Lord、y. All rights reserved.
 //
 
+#define LH +1   //左高
+#define EH 0    //等高
+#define RH -1   //右高
 #include "AVL.hpp"
 #include <iostream>
 using namespace std;
