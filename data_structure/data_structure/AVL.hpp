@@ -29,9 +29,9 @@ public:
         root = new AVLNode();
     }
     
-    void r_rotate(AVL *&p);
-    void l_rotate(AVL *&p);
-    void leftBalance(AVL *&t);
-    void rightBalance(AVL *&t);
+    void r_rotate(AVL *p);
+    void l_rotate(AVL *p);
+    void leftBalance(AVL *t);
+    void rightBalance(AVL *t);
     bool insert(int data);
 };
