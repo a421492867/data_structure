@@ -18,7 +18,7 @@ struct AVLNode{
     int bf;
     AVLNode *left;
     AVLNode *right;
-    AVLNode():left(NULL),right(NULL){};
+    AVLNode():left(NULL),right(NULL),bf(0){};
 };
 
 class AVL{
