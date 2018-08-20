@@ -63,10 +63,35 @@ void AVL::leftBalance(AVLNode *t){
 }
 
 void AVL::rightBalance(AVLNode *t){
-    
+    AVLNode *r, *rl;
+    r = t -> right;
+    switch (r -> bf) {
+        case RH:
+            t -> bf = r -> bf = EH;
+            l_rotate(t);
+            break;
+        case LH:
+            rl = r -> left;
+            switch (rl -> bf) {
+                case RH:
+                    t -> bf = LH;
+                    r -> bf = EH;
+                    break;
+                case EH:
+                    t -> bf = r -> bf = EH;
+                    break;
+                case LH:
+                    t -> bf = EH;
+                    r -> bf = RH;
+                    break;
+            }
+            rl -> bf = EH;
+            r_rotate(t -> right);
+            l_rotate(t);
+    }
 }
 
-bool AVL::insert(int data){
+bool AVL::insert(int data, int *taller){
     
     return true;
 }
