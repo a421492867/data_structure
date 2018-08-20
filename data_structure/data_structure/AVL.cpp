@@ -13,6 +13,7 @@
 #include <iostream>
 using namespace std;
 void AVL::r_rotate(AVLNode *p){
+    //p为当前最小不平衡树的根
     AVLNode *l = new AVLNode();
     l = p -> left;
     p -> left = l -> right;
@@ -29,6 +30,35 @@ void AVL::l_rotate(AVLNode *p){
 }
 
 void AVL::leftBalance(AVLNode *t){
+    AVLNode *l, *lr;
+    l = t -> left;
+    switch (l -> bf) {
+        case LH:
+            t -> bf = l -> bf = EH;
+            r_rotate(t);
+            break;
+        case RH:
+            lr = l -> right;
+            switch (lr -> bf) {
+                case LH:
+                    t -> bf = RH;
+                    l -> bf = EH;
+                    
+                    break;
+                case EH:
+                    t -> bf = l -> bf = EH;
+                    break;
+                
+                    
+                case RH:
+                    t -> bf = EH;
+                    l -> bf = LH;
+                    break;
+            }
+            lr -> bf = EH;
+            l_rotate(t -> left);
+            r_rotate(t);
+    }
     
 }
 
