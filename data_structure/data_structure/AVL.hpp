@@ -25,13 +25,11 @@ class AVL{
 private:
     AVLNode *root;
 public:
-    AVL(){
-        root = new AVLNode();
-    }
     
     void r_rotate(AVLNode *p);
     void l_rotate(AVLNode *p);
     void leftBalance(AVLNode *t);
     void rightBalance(AVLNode *t);
     bool insertAVL(AVLNode *t, int data, bool taller);
+    AVLNode* getroot();
 };

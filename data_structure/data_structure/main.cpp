@@ -355,11 +355,11 @@ void testBST(){
 
 void testAVL(){
     int a[10] = {3,2,1,4,5,6,7,10,9,8};
-    AVLNode *root = NULL;
+    //AVLNode *root = NULL;
     AVL g = AVL();
     bool taller;
     for(int i = 0; i < 10; i++){
-        g.insertAVL(root, a[i], taller);
+        g.insertAVL(g.getroot(), a[i], taller);
     }
     
     cout << "complete" << endl;

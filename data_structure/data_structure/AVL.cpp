@@ -146,3 +146,7 @@ bool AVL::insertAVL(AVLNode *t, int data, bool taller){
     }
     return true;
 }
+
+AVLNode* AVL::getroot(){
+    return this -> root;
+}
