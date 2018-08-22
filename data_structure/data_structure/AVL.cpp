@@ -91,6 +91,58 @@ void AVL::rightBalance(AVLNode *t){
     }
 }
 
-bool AVL::insert(AVLNode *t, int data, int *taller){
+bool AVL::insertAVL(AVLNode *t, int data, bool taller){
+    if(!t){
+        t = new AVLNode();
+        t -> data = data;
+        t -> bf = EH;
+        taller = true;
+    }else{
+        if(data == t -> data){
+            taller = false;
+            return false;
+        }
+        if(data < t -> data){
+            if(!insertAVL(t -> left, data, taller)){
+                return false;
+            }
+            if(taller){
+                switch (t -> bf) {
+                    case LH:
+                        leftBalance(t);
+                        taller = false;
+                        break;
+                    case EH:
+                        t -> bf = LH;
+                        taller = true;
+                    case RH:
+                        t -> bf = EH;
+                        taller = false;
+                        break;
+                }
+            }
+        }
+        else{
+            if(!insertAVL(t -> right, data, taller)){
+                return false;
+            }
+            if(taller){
+                switch (t -> bf) {
+                    case LH:
+                        t -> bf = EH;
+                        taller = false;
+                        break;
+                    case EH:
+                        t -> bf = RH;
+                        taller = true;
+                        break;
+                    case RH:
+                        rightBalance(t);
+                        taller = false;
+                        break;
+                }
+            }
+        }
+    }
     return true;
 }

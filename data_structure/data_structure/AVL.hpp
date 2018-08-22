@@ -33,5 +33,5 @@ public:
     void l_rotate(AVLNode *p);
     void leftBalance(AVLNode *t);
     void rightBalance(AVLNode *t);
-    bool insert(AVLNode *t, int data, int *taller);
+    bool insertAVL(AVLNode *t, int data, bool taller);
 };

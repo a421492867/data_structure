@@ -27,6 +27,7 @@
 #include "AOE.hpp"
 #include "SqSearch.hpp"
 #include "BST.hpp"
+#include "AVL.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -49,6 +50,7 @@ void testTopo();
 void testAOE();
 void testSqSearch();
 void testBST();
+void testAVL();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -70,7 +72,8 @@ int main(int argc, const char * argv[]) {
 //    testTopo();
 //    testAOE();
 //    testSqSearch();
-    testBST();
+//    testBST();
+    testAVL();
     
     
     
@@ -348,6 +351,18 @@ void testBST(){
     cout << t.search(4, p) << endl;
 //    t.preOrder(t.getRoot());
     
+}
+
+void testAVL(){
+    int a[10] = {3,2,1,4,5,6,7,10,9,8};
+    AVLNode *root = NULL;
+    AVL g = AVL();
+    bool taller;
+    for(int i = 0; i < 10; i++){
+        g.insertAVL(root, a[i], taller);
+    }
+    
+    cout << "complete" << endl;
 }
 
 
