@@ -92,6 +92,5 @@ void AVL::rightBalance(AVLNode *t){
 }
 
 bool AVL::insert(int data, int *taller){
-    
     return true;
 }
