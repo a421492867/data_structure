@@ -10,6 +10,7 @@
 		CE08439F20D2327400C2621F /* BiThrTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE08439D20D2327400C2621F /* BiThrTree.cpp */; };
 		CE21DE0A211C407400F36F00 /* BST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE21DE08211C407400F36F00 /* BST.cpp */; };
 		CE21DE0D2122761400F36F00 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE21DE0B2122761400F36F00 /* AVL.cpp */; };
+		CE21DE10212FF7AE00F36F00 /* B-Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE21DE0E212FF7AE00F36F00 /* B-Tree.cpp */; };
 		CE24FF9320C908BC00F9B84A /* BTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE24FF9120C908BC00F9B84A /* BTree.cpp */; };
 		CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6846B920BD318D004E0007 /* StackApplication.cpp */; };
 		CE6846BF20BE6BE3004E0007 /* HStringIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6846BD20BE6BE3004E0007 /* HStringIndex.cpp */; };
@@ -50,6 +51,8 @@
 		CE21DE09211C407400F36F00 /* BST.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BST.hpp; sourceTree = "<group>"; };
 		CE21DE0B2122761400F36F00 /* AVL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AVL.cpp; sourceTree = "<group>"; };
 		CE21DE0C2122761400F36F00 /* AVL.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVL.hpp; sourceTree = "<group>"; };
+		CE21DE0E212FF7AE00F36F00 /* B-Tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "B-Tree.cpp"; sourceTree = "<group>"; };
+		CE21DE0F212FF7AE00F36F00 /* B-Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "B-Tree.hpp"; sourceTree = "<group>"; };
 		CE24FF9120C908BC00F9B84A /* BTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BTree.cpp; sourceTree = "<group>"; };
 		CE24FF9220C908BC00F9B84A /* BTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BTree.hpp; sourceTree = "<group>"; };
 		CE6846B920BD318D004E0007 /* StackApplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StackApplication.cpp; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				CE21DE09211C407400F36F00 /* BST.hpp */,
 				CE21DE0B2122761400F36F00 /* AVL.cpp */,
 				CE21DE0C2122761400F36F00 /* AVL.hpp */,
+				CE21DE0E212FF7AE00F36F00 /* B-Tree.cpp */,
+				CE21DE0F212FF7AE00F36F00 /* B-Tree.hpp */,
 			);
 			name = chapter8;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE21DE0A211C407400F36F00 /* BST.cpp in Sources */,
+				CE21DE10212FF7AE00F36F00 /* B-Tree.cpp in Sources */,
 				CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */,
 				CEDA269020BBA6FD00FCF2DC /* LinkedStack.cpp in Sources */,
 				CEE3D26F20F32EBE00C9C761 /* Graph.cpp in Sources */,
