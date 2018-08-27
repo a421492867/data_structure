@@ -396,5 +396,7 @@ void testSort(){
     s2.bubbleSort();
     Sort s3 = Sort(a);
     s3.bubbleSort1();
+    Sort s4 = Sort(d);
+    s4.selectSort();
 }
 

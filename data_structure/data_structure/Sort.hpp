@@ -28,4 +28,6 @@ public:
     void bubbleSort0();
     void bubbleSort();
     void bubbleSort1();
+    
+    void selectSort();
 };

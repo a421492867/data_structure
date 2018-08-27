@@ -67,3 +67,24 @@ void Sort::bubbleSort1(){
     }
     cout << endl;
 }
+
+void Sort::selectSort(){
+    int i, j, min;
+    for(i = 0; i < this -> length; i++){
+        min = i;
+        for(j = i + 1; j < this -> length; j++){
+            if(this -> array[min] > this -> array[j]){
+                min = j;
+            }
+        }
+        if(i != min){
+            swap(i, min);
+        }
+    }
+    
+    cout << "选择 : " ;
+    for(int i = 0; i < this -> length; i++){
+        cout << this -> array[i] << ",";
+    }
+    cout << endl;
+}
