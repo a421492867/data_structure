@@ -76,7 +76,7 @@ int Sq_Search::Fibonacci_Search(int *a,int n,int key){
     while(n>F[k]-1){
         k++;
     }
-    //补全数组。称为fibonacci值长度的数组
+    //补全数组。成为fibonacci值长度的数组
     for (i=n;i<F[k]-1;i++){
         a[i]=a[n];
     }
