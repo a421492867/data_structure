@@ -28,6 +28,7 @@
 #include "SqSearch.hpp"
 #include "BST.hpp"
 #include "AVL.hpp"
+#include "HashTable.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -51,6 +52,7 @@ void testAOE();
 void testSqSearch();
 void testBST();
 void testAVL();
+void testHash();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -73,7 +75,8 @@ int main(int argc, const char * argv[]) {
 //    testAOE();
 //    testSqSearch();
 //    testBST();
-    testAVL();
+//    testAVL();
+    testHash();
     
     
     
@@ -365,4 +368,20 @@ void testAVL(){
     cout << "complete" << endl;
 }
 
+void testHash(){
+    HashTable ht = HashTable();
+    int array[12] = {12,67,56,16,25,37,22,29,15,47,48,34};
+    for(int i = 0; i < 12; i++){
+        ht.insertHash(array[i]);
+    }
+    
+    ht.print();
+    if(ht.search(22)){
+        cout << "22 is in the hashtable" << endl;
+    }
+    
+    if(!ht.search(1)){
+        cout << "1 is not in the hashtable" << endl;
+    }
+}
 
