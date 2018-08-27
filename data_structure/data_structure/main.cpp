@@ -389,11 +389,12 @@ void testHash(){
 
 void testSort(){
     int d[10]={50,10,90,30,70,40,80,60,20,13};
+    int a[10] = {2,1,3,4,5,6,7,8,9,10};
     Sort s1 = Sort(d);
     s1.bubbleSort0();
     Sort s2 = Sort(d);
     s2.bubbleSort();
-    Sort s3 = Sort(d);
+    Sort s3 = Sort(a);
     s3.bubbleSort1();
 }
 
