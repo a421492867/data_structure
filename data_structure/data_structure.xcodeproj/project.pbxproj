@@ -12,6 +12,7 @@
 		CE21DE0D2122761400F36F00 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE21DE0B2122761400F36F00 /* AVL.cpp */; };
 		CE21DE10212FF7AE00F36F00 /* B-Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE21DE0E212FF7AE00F36F00 /* B-Tree.cpp */; };
 		CE21DE132133CEF000F36F00 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE21DE112133CEF000F36F00 /* HashTable.cpp */; };
+		CE21DE172133E2BA00F36F00 /* Sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE21DE152133E2BA00F36F00 /* Sort.cpp */; };
 		CE24FF9320C908BC00F9B84A /* BTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE24FF9120C908BC00F9B84A /* BTree.cpp */; };
 		CE6846BB20BD318D004E0007 /* StackApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6846B920BD318D004E0007 /* StackApplication.cpp */; };
 		CE6846BF20BE6BE3004E0007 /* HStringIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE6846BD20BE6BE3004E0007 /* HStringIndex.cpp */; };
@@ -56,6 +57,8 @@
 		CE21DE0F212FF7AE00F36F00 /* B-Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "B-Tree.hpp"; sourceTree = "<group>"; };
 		CE21DE112133CEF000F36F00 /* HashTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
 		CE21DE122133CEF000F36F00 /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
+		CE21DE152133E2BA00F36F00 /* Sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sort.cpp; sourceTree = "<group>"; };
+		CE21DE162133E2BA00F36F00 /* Sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sort.hpp; sourceTree = "<group>"; };
 		CE24FF9120C908BC00F9B84A /* BTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BTree.cpp; sourceTree = "<group>"; };
 		CE24FF9220C908BC00F9B84A /* BTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BTree.hpp; sourceTree = "<group>"; };
 		CE6846B920BD318D004E0007 /* StackApplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StackApplication.cpp; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 		CE21DE142133D9A300F36F00 /* chapter9 */ = {
 			isa = PBXGroup;
 			children = (
+				CE21DE152133E2BA00F36F00 /* Sort.cpp */,
+				CE21DE162133E2BA00F36F00 /* Sort.hpp */,
 			);
 			name = chapter9;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				CE21DE10212FF7AE00F36F00 /* B-Tree.cpp in Sources */,
 				CE21DE132133CEF000F36F00 /* HashTable.cpp in Sources */,
 				CEDA268D20BB964900FCF2DC /* SqStack.cpp in Sources */,
+				CE21DE172133E2BA00F36F00 /* Sort.cpp in Sources */,
 				CEDA269020BBA6FD00FCF2DC /* LinkedStack.cpp in Sources */,
 				CEE3D26F20F32EBE00C9C761 /* Graph.cpp in Sources */,
 				CE87F6CE210AB9D200C1C324 /* Path.cpp in Sources */,

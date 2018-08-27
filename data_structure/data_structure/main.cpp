@@ -29,6 +29,7 @@
 #include "BST.hpp"
 #include "AVL.hpp"
 #include "HashTable.hpp"
+#include "Sort.hpp"
 using namespace std;
 void testArrayList();
 void testChainList();
@@ -53,6 +54,7 @@ void testSqSearch();
 void testBST();
 void testAVL();
 void testHash();
+void testSort();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //testArrayList();
@@ -76,8 +78,8 @@ int main(int argc, const char * argv[]) {
 //    testSqSearch();
 //    testBST();
 //    testAVL();
-    testHash();
-    
+//    testHash();
+    testSort();
     
     
 }
@@ -383,5 +385,15 @@ void testHash(){
     if(!ht.search(1)){
         cout << "1 is not in the hashtable" << endl;
     }
+}
+
+void testSort(){
+    int d[10]={50,10,90,30,70,40,80,60,20,13};
+    Sort s1 = Sort(d);
+    s1.bubbleSort0();
+    Sort s2 = Sort(d);
+    s2.bubbleSort();
+    Sort s3 = Sort(d);
+    s3.bubbleSort1();
 }
 
