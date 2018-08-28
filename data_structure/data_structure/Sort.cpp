@@ -89,4 +89,19 @@ void Sort::selectSort(){
     cout << endl;
 }
 
+void Sort::insertSort(){
+    for(int i = 0; i < this -> length; i++){
+        for(int j = i; j > 0; j--){
+            if(this -> array[j - 1] > this -> array[j]){
+                swap(j - 1, j);
+            }
+        }
+    }
+    cout << "插入 : " ;
+    for(int i = 0; i < this -> length; i++){
+        cout << this -> array[i] << ",";
+    }
+    cout << endl;
+}
+
 

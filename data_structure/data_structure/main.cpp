@@ -399,7 +399,7 @@ void testSort(){
     Sort s4 = Sort(d);
     s4.selectSort();
     
-//    Sort s5 = Sort(d);
-//    s5.insertSort();
+    Sort s5 = Sort(d);
+    s5.insertSort();
 }
 
