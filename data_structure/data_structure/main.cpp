@@ -398,5 +398,8 @@ void testSort(){
     s3.bubbleSort1();
     Sort s4 = Sort(d);
     s4.selectSort();
+    
+//    Sort s5 = Sort(d);
+//    s5.insertSort();
 }
 

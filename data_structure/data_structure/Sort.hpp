@@ -30,4 +30,6 @@ public:
     void bubbleSort1();
     
     void selectSort();
+    
+    void insertSort();
 };
