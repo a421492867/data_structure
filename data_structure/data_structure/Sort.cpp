@@ -90,12 +90,24 @@ void Sort::selectSort(){
 }
 
 void Sort::insertSort(){
-    for(int i = 0; i < this -> length; i++){
-        for(int j = i; j > 0; j--){
-            if(this -> array[j - 1] > this -> array[j]){
-                swap(j - 1, j);
-            }
+//    for(int i = 0; i < this -> length; i++){
+//        for(int j = i; j > 0; j--){
+//            if(this -> array[j - 1] > this -> array[j]){
+//                swap(j - 1, j);
+//            }
+//        }
+//    }
+    for(int j = 1; j < this -> length; j++){
+        int key = this -> array[j]; //待排序的第一个元素
+        int i = j - 1;  //已排序的元素最后一个索引
+        while (i >= 0 && key < this -> array[i]) {
+            //从后向前逐个比较已排序的数组，若比他小，后者用前者代替
+            //数组向后移动
+            this -> array[i + 1] = this -> array[i];
+            i --;
         }
+        //在合适的位置插入
+        this ->array[i + 1] = key;
     }
     cout << "插入 : " ;
     for(int i = 0; i < this -> length; i++){
