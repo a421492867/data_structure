@@ -117,7 +117,20 @@ void Sort::insertSort(){
 }
 
 void Sort::shellSort(){
-   
+    int i, j, step, temp;
+    step = this -> length;
+    while(step > 1){
+        step = step / 3 + 1;
+        for(i = step; i < this -> length; i++){
+            if(this -> array[i] < this -> array[i - step]){
+                temp = this -> array[i];
+                for(j = i - step; j >= 0 && temp < this -> array[j]; j -= step){
+                    this -> array[j + step] = this -> array[j];
+                }
+                this -> array[j + step] = temp;
+            }
+        }
+    }
     
     
     cout << "希尔 : " ;
