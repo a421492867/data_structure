@@ -401,5 +401,8 @@ void testSort(){
     
     Sort s5 = Sort(d);
     s5.insertSort();
+    
+    Sort s6 = Sort(d);
+    s6.shellSort();
 }
 

@@ -116,4 +116,15 @@ void Sort::insertSort(){
     cout << endl;
 }
 
+void Sort::shellSort(){
+   
+    
+    
+    cout << "希尔 : " ;
+    for(int i = 0; i < this -> length; i++){
+        cout << this -> array[i] << ",";
+    }
+    cout << endl;
+}
+
 

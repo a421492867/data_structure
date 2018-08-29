@@ -32,4 +32,6 @@ public:
     void selectSort();
     
     void insertSort();
+    
+    void shellSort();
 };
