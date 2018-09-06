@@ -140,4 +140,37 @@ void Sort::shellSort(){
     cout << endl;
 }
 
+void Sort::heapSort(){
+    
+    for (int i = length/2 - 1; i >= 0; --i) {
+        heapAdjust(length, i);
+    }
+    
+    for (int i = length-1; i >= 0; --i) {
+        swap(0, i);
+        heapAdjust(i, 0);
+    }
+    
+    cout << "堆 : " ;
+    for(int i = 0; i < this -> length; i++){
+        cout << this -> array[i] << ",";
+    }
+    cout << endl;
 
+}
+
+void Sort::heapAdjust(int length, int k){
+    int tmp = this -> array[k];
+    int i=2*k+1;
+    while (i<length) {
+        if (i+1 < length && this -> array[i] > this -> array[i+1])
+            ++i;
+        if (tmp < this -> array[i])
+            break;
+        this -> array[k] = this -> array[i];
+        k = i;
+        i = 2 * k+1;
+    }
+    this -> array[k] = tmp;
+
+}

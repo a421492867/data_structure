@@ -404,5 +404,8 @@ void testSort(){
     
     Sort s6 = Sort(d);
     s6.shellSort();
+    
+    Sort s7 = Sort(d);
+    s7.heapSort();
 }
 

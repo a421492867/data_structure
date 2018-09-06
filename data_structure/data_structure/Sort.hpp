@@ -34,4 +34,7 @@ public:
     void insertSort();
     
     void shellSort();
+    
+    void heapSort();
+    void heapAdjust(int length, int k);
 };
