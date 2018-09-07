@@ -161,15 +161,15 @@ void Sort::heapSort(){
 
 void Sort::heapAdjust(int length, int k){
     int tmp = this -> array[k];
-    int i=2*k+1;
-    while (i<length) {
+    int i=2 * k + 1;
+    while (i < length) {
         if (i+1 < length && this -> array[i] > this -> array[i+1])
             ++i;
         if (tmp < this -> array[i])
             break;
         this -> array[k] = this -> array[i];
         k = i;
-        i = 2 * k+1;
+        i = 2 * k + 1;
     }
     this -> array[k] = tmp;
 
