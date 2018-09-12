@@ -407,5 +407,8 @@ void testSort(){
     
     Sort s7 = Sort(d);
     s7.heapSort();
+    
+    Sort s8 = Sort(d);
+    s8.mergeSort();
 }
 

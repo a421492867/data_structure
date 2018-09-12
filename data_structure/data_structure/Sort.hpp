@@ -37,4 +37,8 @@ public:
     
     void heapSort();
     void heapAdjust(int length, int k);
+    
+    void mergeSort();
+    void MSort(int *arr, int left, int right);
+    void Merge(int *arr, int left, int center, int right, int n);
 };

@@ -174,3 +174,46 @@ void Sort::heapAdjust(int length, int k){
     this -> array[k] = tmp;
 
 }
+
+void Sort::mergeSort(){
+    MSort(this -> array, 0, this -> length - 1);
+    cout << "归并 : " ;
+    for(int i = 0; i < this -> length; i++){
+        cout << this -> array[i] << ",";
+    }
+    cout << endl;
+}
+void Sort::MSort(int *arr, int left, int right){
+    if(left < right){
+        int center = (left + right) / 2;
+        MSort(arr, left, center);
+        MSort(arr, center + 1, right);
+        Merge(arr, left, center, right, right - left + 1);
+    }
+}
+void Sort::Merge(int *arr, int left, int center, int right, int n){
+    int *t = new int[n];
+    int i = left;
+    int j = center + 1;
+    int k = 0;
+    while (i<=center && j<=right){
+            if (arr[i] <= arr[j])
+                t[k++] = arr[i++];
+            else
+                t[k++] = arr[j++];
+    }
+
+    if (i == center+1){
+        while (j <= right){
+            t[k++] = arr[j++];
+            }
+        }else{
+            while (i <= center){
+                t[k++] = arr[i++];
+            }
+        }
+    
+    for (i=left,k=0; i<=right; i++,k++){
+        arr[i] = t[k];
+        }
+}
